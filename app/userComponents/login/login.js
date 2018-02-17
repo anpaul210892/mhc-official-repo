@@ -4,8 +4,8 @@
     angular.module('myApp.login', [])
     .controller('loginCtrl', loginCtrl);
     
-    loginCtrl.$inject = ['$scope', '$remember'];
-    function loginCtrl($scope, $remember) {
+    loginCtrl.$inject = ['$scope', '$remember', '$location'];
+    function loginCtrl($scope, $remember, $location) {
 
         $scope.remember = false;
         if ($remember('username') && $remember('password') ) {
@@ -23,6 +23,14 @@
             }
         };
          
+
+        $scope.redictToForgot = function() {
+            $location.path("/forgotPassword");
+        }
+
+        $scope.redictToRegister = function() {
+            $location.path("/register");
+        }
 
     //     $scope.signFirst=true;
     //     $scope.signSecond=false;
@@ -101,7 +109,7 @@
 
         $scope.login = function(){
             firebase.auth().signInWithEmailAndPassword($scope.email, $scope.password).then(function(user) {
-                window.location.href = "#/admin";
+                $location.path("/admin");
             }, function(error) {
                 var errorCode = error.code;
                 var errorMessage = error.message;

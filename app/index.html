@@ -4,39 +4,48 @@
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> 
 <html lang="en"> <!--<![endif]-->
-<head >
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>MHC</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
-  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-  <script src="js/jquery-1.12.1.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+<head> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon --> 
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
     <title>Myholisticclub.com</title>
+	
+    <link rel="stylesheet" href="assets/plugins/html5-editor/bootstrap-wysihtml5.css" />
     <!-- Bootstrap Core CSS -->
     <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- chartist CSS -->
-    <link href="assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
-    <link href="assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
-    <link href="assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
-    <link href="assets/plugins/css-chart/css-chart.css" rel="stylesheet">
-    <!--This page css - Morris CSS -->
+	
+    <link href="assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet">
+    <!-- Page plugins css -->
+    <link href="assets/plugins/clockpicker/dist/jquery-clockpicker.min.css" rel="stylesheet">
+    <!-- Color picker plugins css -->
+    <link href="assets/plugins/jquery-asColorPicker-master/css/asColorPicker.css" rel="stylesheet">
+    <!-- Date picker plugins css -->
+    <link href="assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+    <!-- Daterange picker plugins css -->
+    <link href="assets/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
+    <link href="assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- colors css -->
+    <link href="css/colors/blue.css" id="theme" rel="stylesheet">
     <link href="assets/plugins/c3-master/c3.min.css" rel="stylesheet">
     <!-- Vector CSS -->
     <link href="assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
-    <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
-    <!-- Calendar CSS -->
-    <link href="assets/plugins/calendar/dist/fullcalendar.css" rel="stylesheet" />
-    <!-- colors css -->
-    <link href="css/colors/blue.css" id="theme" rel="stylesheet">
-
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="assets/plugins/jquery/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
 </head>
 <body ng-app="myApp">
   <!--[if lt IE 7]>
@@ -45,50 +54,10 @@
 
   <div ng-view></div>
 	
-  <!-- All Jquery -->
-    <!-- ============================================================== -->
-    <script src="assets/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="assets/plugins/bootstrap/js/popper.min.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="js/jquery.slimscroll.js"></script>
-    <!--Wave Effects -->
-    <script src="js/waves.js"></script>
-    <!--Menu sidebar -->
-    <script src="js/sidebarmenu.js"></script>
-    <!--stickey kit -->
-    <script src="assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
-    <script src="assets/plugins/sparkline/jquery.sparkline.min.js"></script>
-    <!--stickey kit -->
-    <script src="assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
-    <script src="assets/plugins/sparkline/jquery.sparkline.min.js"></script>
-    <script src="assets/plugins/sparkline/jquery.sparkline.min.js"></script>
-    <!--Custom JavaScript -->
-    <script src="js/custom.min.js"></script>
-    <!-- ============================================================== -->
-    <!-- This page plugins -->
-    <!-- ============================================================== -->
-    <!-- chartist chart -->
-    <script src="assets/plugins/chartist-js/dist/chartist.min.js"></script>
-    <script src="assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
-    <!--c3 JavaScript -->
-    <script src="assets/plugins/d3/d3.min.js"></script>
-    <script src="assets/plugins/c3-master/c3.min.js"></script>
-    <!-- Vector map JavaScript -->
-    <script src="assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
-    <script src="assets/plugins/vectormap/jquery-jvectormap-us-aea-en.js"></script>
-    <script src="js/dashboard2.js"></script>
-    <!-- Calendar JavaScript -->
-    <script src="assets/plugins/moment/moment.js"></script>
-    <script src='assets/plugins/calendar/dist/fullcalendar.min.js'></script>
-    <script src="assets/plugins/calendar/dist/jquery.fullcalendar.js"></script>
-    <script src="assets/plugins/calendar/dist/cal-init.js"></script>
-    <!-- ============================================================== -->
-    <!-- Style switcher -->
-    <!-- ============================================================== -->
-    <script src="assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
-    <script src="assets/plugins/jquery/jquery.min.js"></script>
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+    
     <!-- Bootstrap tether Core JavaScript -->
     <script src="assets/plugins/bootstrap/js/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
@@ -102,7 +71,7 @@
     <script src="assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
     <script src="assets/plugins/sparkline/jquery.sparkline.min.js"></script>
     <!--Custom JavaScript -->
-    <script src="js/custom.min.js"></script>
+    <!-- <script src="js/custom.js"></script> -->
     <!-- ============================================================== -->
     <!-- This page plugins -->
     <!-- ============================================================== -->
@@ -222,36 +191,8 @@
     <!-- ============================================================== -->
 	 
     <!-- wysuhtml5 Plugin JavaScript -->
-    <script src="assets/plugins/tinymce/tinymce.min.js"></script>
-    <script>
-    $(document).ready(function() {
-
-        if ($("#mymce").length > 0) {
-            tinymce.init({
-                selector: "textarea#mymce",
-                theme: "modern",
-                height: 300,
-                plugins: [
-                    "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
-                    "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-                    "save table contextmenu directionality emoticons template paste textcolor"
-                ],
-                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
-
-            });
-        }
-    });
-    </script>   
-     
-    <script>
-    !function(window, document, $) {
-        "use strict";
-        $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(), $(".skin-square input").iCheck({
-            checkboxClass: "icheckbox_square-green",
-            radioClass: "iradio_square-green"
-        }), $(".touchspin").TouchSpin(), $(".switchBootstrap").bootstrapSwitch();
-    }(window, document, jQuery);
-    </script>
+    <script type="text/javascript" src="bower_components/tinymce/tinymce.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-tinymce/src/tinymce.js"></script>
 	<!-- Plugin JavaScript -->
     
      
@@ -265,118 +206,112 @@
     <script src="assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
     <script src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
     <script>
-        // MAterial Date picker    
-        $('#mdate').bootstrapMaterialDatePicker({ weekStart : 0, time: false });
-        $('#timepicker').bootstrapMaterialDatePicker({ format : 'HH:mm', time: true, date: false });
-        $('#start-date').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY - HH:mm' });
-        $('#end-date').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY - HH:mm' });
-       
+    // MAterial Date picker    
+    $('#mdate').bootstrapMaterialDatePicker({ weekStart : 0, time: false });
+         $('#timepicker').bootstrapMaterialDatePicker({ format : 'HH:mm', time: true, date: false });
+    $('#start-date').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY - HH:mm' });
+	$('#end-date').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY - HH:mm' });
+   
         $('#min-date').bootstrapMaterialDatePicker({ format : 'DD/MM/YYYY HH:mm', minDate : new Date() });
-        // Clock pickers
-        $('#single-input').clockpicker({
-            placement: 'bottom',
-            align: 'left',
-            autoclose: true,
-            'default': 'now'
-        });
-        $('.clockpicker').clockpicker({
-            donetext: 'Done',
-        }).find('input').change(function() {
-            console.log(this.value);
-        });
-        $('#check-minutes').click(function(e) {
-            // Have to stop here
-            e.stopPropagation();
-            input.clockpicker('show').clockpicker('toggleView', 'minutes');
-        });
-        if (/mobile/i.test(navigator.userAgent)) {
-            $('input').prop('readOnly', true);
+    // Clock pickers
+    $('#single-input').clockpicker({
+        placement: 'bottom',
+        align: 'left',
+        autoclose: true,
+        'default': 'now'
+    });
+    $('.clockpicker').clockpicker({
+        donetext: 'Done',
+    }).find('input').change(function() {
+        console.log(this.value);
+    });
+    $('#check-minutes').click(function(e) {
+        // Have to stop here
+        e.stopPropagation();
+        input.clockpicker('show').clockpicker('toggleView', 'minutes');
+    });
+    if (/mobile/i.test(navigator.userAgent)) {
+        $('input').prop('readOnly', true);
+    }
+    // Colorpicker
+    $(".colorpicker").asColorPicker();
+    $(".complex-colorpicker").asColorPicker({
+        mode: 'complex'
+    });
+    $(".gradient-colorpicker").asColorPicker({
+        mode: 'gradient'
+    });
+    // Date Picker
+    jQuery('.mydatepicker, #datepicker').datepicker();
+    jQuery('#datepicker-autoclose').datepicker({
+        autoclose: true,
+        todayHighlight: true
+    });
+    jQuery('#date-range').datepicker({
+        toggleActive: true
+    });
+    jQuery('#datepicker-inline').datepicker({
+        todayHighlight: true
+    });
+    // Daterange picker
+    $('.input-daterange-datepicker').daterangepicker({
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-danger',
+        cancelClass: 'btn-inverse'
+    });
+    $('.input-daterange-timepicker').daterangepicker({
+        timePicker: true,
+        format: 'DD/MM/YYYY h:mm A',
+        timePickerIncrement: 30,
+        timePicker12Hour: true,
+        timePickerSeconds: false,
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-danger',
+        cancelClass: 'btn-inverse'
+    });
+    $('.input-limit-datepicker').daterangepicker({
+        format: 'DD/MM/YYYY',
+        minDate: '06/01/2015',
+        maxDate: '06/30/2015',
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-danger',
+        cancelClass: 'btn-inverse',
+        dateLimit: {
+            days: 6
         }
-        // Colorpicker
-        $(".colorpicker").asColorPicker();
-        $(".complex-colorpicker").asColorPicker({
-            mode: 'complex'
-        });
-        $(".gradient-colorpicker").asColorPicker({
-            mode: 'gradient'
-        });
-        // Date Picker
-        jQuery('.mydatepicker, #datepicker').datepicker();
-        jQuery('#datepicker-autoclose').datepicker({
-            autoclose: true,
-            todayHighlight: true
-        });
-        jQuery('#date-range').datepicker({
-            toggleActive: true
-        });
-        jQuery('#datepicker-inline').datepicker({
-            todayHighlight: true
-        });
-        // Daterange picker
-        $('.input-daterange-datepicker').daterangepicker({
-            buttonClasses: ['btn', 'btn-sm'],
-            applyClass: 'btn-danger',
-            cancelClass: 'btn-inverse'
-        });
-        $('.input-daterange-timepicker').daterangepicker({
-            timePicker: true,
-            format: 'DD/MM/YYYY h:mm A',
-            timePickerIncrement: 30,
-            timePicker12Hour: true,
-            timePickerSeconds: false,
-            buttonClasses: ['btn', 'btn-sm'],
-            applyClass: 'btn-danger',
-            cancelClass: 'btn-inverse'
-        });
-        $('.input-limit-datepicker').daterangepicker({
-            format: 'DD/MM/YYYY',
-            minDate: '06/01/2015',
-            maxDate: '06/30/2015',
-            buttonClasses: ['btn', 'btn-sm'],
-            applyClass: 'btn-danger',
-            cancelClass: 'btn-inverse',
-            dateLimit: {
-                days: 6
+    });
+ 
+    </script>
+	<script src="js/add-remove-from.js"></script>
+		 
+<script type="text/javascript">
+    $(function () {
+        $("#timetype").click(function () {
+            if ($(this).is(":checked")) {
+               $("#onetime").hide();
+                $("#mtime").show(); 
+            } else {
+                $("#onetime").show();
+                $("#mtime").hide();
             }
         });
-     
-        </script>
-        <script src="js/add-remove-from.js"></script>
-             
-    <script type="text/javascript">
-        $(function () {
-            $("#timetype").click(function () {
-                if ($(this).is(":checked")) {
-                   $("#onetime").hide();
-                    $("#mtime").show(); 
-                } else {
-                    $("#onetime").show();
-                    $("#mtime").hide();
-                }
-            });
-        });
-    </script>
-    <!-- ============================================================== -->
-    <!-- Style switcher -->
-    <!-- ============================================================== -->
-    <script src="assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="app.js"></script>
-  <!-- user Components -->
-  <script src="userComponents/login/login.js"></script>
-  <script src="userComponents/admin/admin.js"></script>
-  <script src="userComponents/register/register.js"></script>
-  <script src="userComponents/forgotPassword/forgotPassword.js"></script>
-  <script src="userComponents/common/rememberMe.service.js"></script>
-  <script src="userComponents/common/register.directive.js"></script>
-  <script src="userComponents/profile/profile.js"></script>
-  <script src="userComponents/addNewActivity/addNewActivity.js"></script>
-  
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
+    });
+</script> 
+	</div>
+    <script src="app.js"></script>
+    <!-- user Components -->
+    <script src="userComponents/login/login.js"></script>
+    <script src="userComponents/admin/admin.js"></script>
+    <script src="userComponents/register/register.js"></script>
+    <script src="userComponents/forgotPassword/forgotPassword.js"></script>
+    <script src="userComponents/common/rememberMe.service.js"></script>
+    <script src="userComponents/common/register.directive.js"></script>
+    <script src="userComponents/profile/profile.js"></script>
+    <script src="userComponents/addNewActivity/addNewActivity.js"></script>
+    
+    <script src="components/version/version.js"></script>
+    <script src="components/version/version-directive.js"></script>
+    <script src="components/version/interpolate-filter.js"></script>
   <footer class="footer">
     © 2018 MHC Dashboard by weblyo.com
 </footer>

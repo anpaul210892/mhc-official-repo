@@ -112,8 +112,8 @@
                             <a class="waves-effect waves-dark" href="#/admin" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a>
                              
                         </li>
-                        <li>
-                            <a class="waves-effect waves-dark" href="#/addNewActivity" aria-expanded="false"><i class="mdi mdi-dns"></i><span class="hide-menu">Add New Activity </span></a>
+                        <li class="active">
+                            <a class="waves-effect waves-dark active" href="#/addNewActivity" aria-expanded="false"><i class="mdi mdi-dns"></i><span class="hide-menu">Add New Activity </span></a>
                              
                         </li>
                         
@@ -225,27 +225,27 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Event Description</label>
-                                    <textarea id="mymce" name="area"></textarea>
-                                </div>
-								<div class="row form-material">
-		                                <div class="col-md-12">
-                                          <label>Add New Label</label> <button type="button" class="btn btn-default labButton"><i class="fa fa-plus"></i></button>
+                                        <label>Event Description</label>
+                                        <textarea ui-tinymce="tinymceOptions" ng-model="tinymceModel"></textarea>
+                                    </div>
+                                    <div class="row form-material">
+                                            <div class="col-md-12">
+                                              <label>Add New Label</label> <button type="button" class="btn btn-default labButton"><i class="fa fa-plus"></i></button>
+                                            </div> 
                                         </div> 
-                                    </div> 
-									<!-- containing an text field and a Remove button -->
-                                    <div class="form-group hide" id="labTemplate">
-                                      <div class="row form-material">
-								           <div class="col-md-10">
-										    <input type="text" required class="form-control" placeholder="Wirte your Label Name"><br>
-										   <textarea id="mymce" name="area"></textarea>
-                                           </div>
-										   <div class="col-md-1">
-                                            <button type="button" class="btn btn-default labButtoon"><i class="fa fa-minus"></i></button>
-                                           </div>
-	                                	    
-                                     </div>
-	                                </div>
+                                        <!-- containing an text field and a Remove button -->
+                                        <div class="form-group hide" id="labTemplate">
+                                          <div class="row form-material">
+                                               <div class="col-md-10">
+                                                <input type="text" required class="form-control" placeholder="Wirte your Label Name"><br>
+                                                <textarea ui-tinymce="tinymceOptions" ng-model="tinymceModel"></textarea>
+                                               </div>
+                                               <div class="col-md-1">
+                                                <button type="button" class="btn btn-default labButtoon"><i class="fa fa-minus"></i></button>
+                                               </div>
+                                                
+                                         </div>
+                                        </div>
                                 <fieldset class="form-group">
                                     <label>Header Image</label>
                                     <label class="custom-file d-block">

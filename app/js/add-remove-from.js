@@ -14,8 +14,7 @@
                                      .insertBefore($template),
                      $option   = $clone.find('[name="option[]"]');
      
-                 // Add new field
-                 $('#surveyForm').formValidation('addField', $option);
+                 // Add new field 
              })
      
              // Remove button click handler
@@ -26,8 +25,7 @@
                  // Remove element containing the option
                  $row.remove();
      
-                 // Remove field
-                 $('#surveyForm').formValidation('removeField', $option);
+                 // Remove field 
              })
      
              // Called after adding new field
@@ -71,8 +69,7 @@
                                      .insertBefore($template),
                      $option   = $clone.find('[name="option[]"]');
      
-                 // Add new field
-                 $('#surveyForm').formValidation('addField', $option);
+                 // Add new field 
              })
      
              // Remove button click handler
@@ -83,8 +80,7 @@
                  // Remove element containing the option
                  $row.remove();
      
-                 // Remove field
-                 $('#surveyForm').formValidation('removeField', $option);
+                 // Remove field 
              })
      
              // Called after adding new field
@@ -130,8 +126,7 @@
                                      .insertBefore($template),
                      $option   = $clone.find('[name="option[]"]');
      
-                 // Add new field
-                 $('#surveyForm').formValidation('addField', $option);
+                 // Add new field 
              })
      
              // Remove button click handler
@@ -142,8 +137,7 @@
                  // Remove element containing the option
                  $row.remove();
      
-                 // Remove field
-                 $('#surveyForm').formValidation('removeField', $option);
+                 // Remove field 
              })
      
              // Called after adding new field
@@ -189,8 +183,7 @@
                                      .insertBefore($template),
                      $option   = $clone.find('[name="option[]"]');
      
-                 // Add new field
-                 $('#surveyForm').formValidation('addField', $option);
+                 // Add new field 
              })
      
              // Remove button click handler
@@ -201,8 +194,7 @@
                  // Remove element containing the option
                  $row.remove();
      
-                 // Remove field
-                 $('#surveyForm').formValidation('removeField', $option);
+                 // Remove field 
              })
      
              // Called after adding new field
@@ -249,8 +241,7 @@
                                      .insertBefore($template),
                      $option   = $clone.find('[name="option[]"]');
      
-                 // Add new field
-                 $('#surveyForm').formValidation('addField', $option);
+                 // Add new field 
              })
      
              // Remove button click handler
@@ -261,8 +252,7 @@
                  // Remove element containing the option
                  $row.remove();
      
-                 // Remove field
-                 $('#surveyForm').formValidation('removeField', $option);
+                 // Remove field 
              })
      
              // Called after adding new field
@@ -307,8 +297,7 @@
                                      .insertBefore($template),
                      $option   = $clone.find('[name="option[]"]');
      
-                 // Add new field
-                 $('#surveyForm').formValidation('addField', $option);
+                 // Add new field 
              })
      
              // Remove button click handler
@@ -319,8 +308,7 @@
                  // Remove element containing the option
                  $row.remove();
      
-                 // Remove field
-                 $('#surveyForm').formValidation('removeField', $option);
+                 // Remove field 
              })
      
              // Called after adding new field
@@ -365,8 +353,7 @@
                                      .insertBefore($template),
                      $option   = $clone.find('[name="option[]"]');
      
-                 // Add new field
-                 $('#surveyForm').formValidation('addField', $option);
+                 // Add new field 
              })
      
              // Remove button click handler
@@ -377,8 +364,7 @@
                  // Remove element containing the option
                  $row.remove();
      
-                 // Remove field
-                 $('#surveyForm').formValidation('removeField', $option);
+                 // Remove field 
              })
      
              // Called after adding new field
@@ -423,8 +409,7 @@
                                      .insertBefore($template),
                      $option   = $clone.find('[name="option[]"]');
      
-                 // Add new field
-                 $('#surveyForm').formValidation('addField', $option);
+                 // Add new field 
              })
      
              // Remove button click handler
@@ -435,8 +420,7 @@
                  // Remove element containing the option
                  $row.remove();
      
-                 // Remove field
-                 $('#surveyForm').formValidation('removeField', $option);
+                 // Remove field 
              })
      
              // Called after adding new field
@@ -483,7 +467,6 @@
                      $option   = $clone.find('[name="option[]"]');
      
                  // Add new field
-                 $('#surveyForm').formValidation('addField', $option);
              })
      
              // Remove button click handler
@@ -494,8 +477,7 @@
                  // Remove element containing the option
                  $row.remove();
      
-                 // Remove field
-                 $('#surveyForm').formValidation('removeField', $option);
+                 // Remove field 
              })
      
              // Called after adding new field

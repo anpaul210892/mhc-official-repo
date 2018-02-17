@@ -9,7 +9,8 @@ var mhcApp = angular.module('myApp', [
   'myApp.forgotPassword',
   'myApp.profile',
   'myApp.addNewActivity',
-  'myApp.version'
+  'myApp.version',
+  'ui.tinymce'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $routeProvider
