@@ -15,7 +15,7 @@
                     <!-- Logo -->
                     <!-- ============================================================== -->
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href ng-click="logoClick()">
                             <!-- Logo icon -->
                             <b>
                                 <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
@@ -68,7 +68,7 @@
                                         <li role="separator" class="divider"></li>
                                         <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
                                         <li role="separator" class="divider"></li>
-                                        <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                                        <li><a href ng-click="logout()"><i class="fa fa-power-off"></i> Logout</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -121,14 +121,6 @@
                 </div>
                 <!-- End Sidebar scroll-->
                 <!-- Bottom points-->
-                <div class="sidebar-footer">
-                    <!-- item-->
-                    <a href="" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
-                    <!-- item-->
-                    <a href="" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
-                    <!-- item-->
-                    <a href="" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
-                </div>
                 <!-- End Bottom points-->
             </aside>
             <!-- ============================================================== -->

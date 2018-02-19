@@ -12,7 +12,7 @@
                 <!-- Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href ng-click="logoClick()">
                         <!-- Logo icon -->
                         <b> 
                             <!-- Dark Logo icon -->
@@ -34,8 +34,8 @@
                 <div class="navbar-collapse">
                     <ul class="navbar-nav mr-auto mt-md-0">
                        <!-- This is  -->
-                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
-                        <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>  
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href ng-click="changeSideBar('mobile')"><i class="mdi mdi-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href ng-click="changeSideBar('desktop')"><i class="ti-menu"></i></a> </li>  
                         
                         
                     </ul>
@@ -54,17 +54,17 @@
                                             <div class="u-img"><img src="assets/images/users/1.jpg" alt="user"></div>
                                             <div class="u-text">
                                                 <h4>Rameshwar</h4>
-                                                <p class="text-muted">info@weblyo.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
+                                                <p class="text-muted">info@weblyo.com</p><a href ng-click="redirectToProfile()" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
                                         </div>
                                     </li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
+                                    <li><a ng-click="redirectToProfile()"><i class="ti-user"></i> My Profile</a></li>
                                      
                                      
                                     <li role="separator" class="divider"></li>
                                     <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                                    <li><a href ng-click="logout()"><i class="fa fa-power-off"></i> Logout</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -93,14 +93,8 @@
                     <!-- User profile image -->
                     <div class="profile-img"> <img src="assets/images/users/profile.png" alt="user" /> </div>
                     <!-- User profile text-->
-                    <div class="profile-text"> <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Rameshwar</a>
-                        <div class="dropdown-menu animated flipInY">
-                            <a href="#" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
-                             
-                             
-                            <div class="dropdown-divider"></div> <a href="#" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
-                            <div class="dropdown-divider"></div> <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
-                        </div>
+                    <div class="profile-text"> <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Rameshwar</a>
+
                     </div>
                 </div>
                 <!-- End User profile text-->
@@ -109,11 +103,11 @@
                     <ul id="sidebarnav">
                         <li class="nav-small-cap">PERSONAL</li>
                         <li>
-                            <a class="waves-effect waves-dark" href="#/admin" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a>
+                            <a class="waves-effect waves-dark" href ng-click="redirecttoAmin()" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a>
                              
                         </li>
                         <li class="active">
-                            <a class="waves-effect waves-dark active" href="#/addNewActivity" aria-expanded="false"><i class="mdi mdi-dns"></i><span class="hide-menu">Add New Activity </span></a>
+                            <a class="waves-effect waves-dark active" href aria-expanded="false"><i class="mdi mdi-dns"></i><span class="hide-menu">Add New Activity </span></a>
                              
                         </li>
                         
@@ -124,14 +118,6 @@
             </div>
             <!-- End Sidebar scroll-->
             <!-- Bottom points-->
-            <div class="sidebar-footer">
-                <!-- item-->
-                <a href="" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
-                <!-- item-->
-                <a href="" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
-                <!-- item-->
-                <a href="" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
-            </div>
             <!-- End Bottom points-->
         </aside>
         <!-- ============================================================== -->
