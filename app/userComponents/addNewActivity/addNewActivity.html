@@ -230,20 +230,19 @@
                                     </div>
                                     <div class="row form-material">
                                             <div class="col-md-12">
-                                              <label>Add New Label</label> <button type="button" class="btn btn-default labButton"><i class="fa fa-plus"></i></button>
+                                              <label>Add New Label</label> <button ng-click="clonerow()" type="button" class="btn btn-default labButton"><i class="fa fa-plus"></i></button>
                                             </div> 
                                         </div> 
                                         <!-- containing an text field and a Remove button -->
                                         <div class="form-group hide" id="labTemplate">
-                                          <div class="row form-material">
-                                               <div class="col-md-10">
+                                          <div class="row form-material" id="templateToClone">
+                                               <div class="col-md-11">
                                                 <input type="text" required class="form-control" placeholder="Wirte your Label Name"><br>
-                                                <textarea ui-tinymce="tinymceOptions" ng-model="tinymceModel"></textarea>
+                                                <textarea ui-tinymce="tinymceOptions" ng-model="tinymceModeli"></textarea>
                                                </div>
-                                               <div class="col-md-1">
-                                                <button type="button" class="btn btn-default labButtoon"><i class="fa fa-minus"></i></button>
-                                               </div>
-                                                
+                                               <div class="col-md-1" id="button">
+                                                <button type="button" ng-click="cloneremove($event)" class="btn btn-default labButtoon"><i class="fa fa-minus"></i></button>
+                                               </div> 
                                          </div>
                                         </div>
                                 <fieldset class="form-group">
@@ -268,7 +267,7 @@
                                 <div class="form-group switch">
                                             <label><b><big>Time Type:</big></b></label>
                                             <label>One -Time
-                                                <input type="checkbox" id="timetype"><span class="lever"></span>Multiple Slots</label>
+                                                <input type="checkbox" ng-model="checked" ng-click="showSingleMultiple()" id="timetype"><span class="lever"></span>Multiple Slots</label>
                                 </div>
 								<div class="card">
                                 <div class="card-body">  
@@ -586,7 +585,7 @@
 	                             </div>
                                 </div>
 								</div>
-								
+                                
 								<div class="form-group switch">
                                             <label><b><big>Transportation:</big></b></label>
                                             <label>No

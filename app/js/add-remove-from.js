@@ -457,28 +457,28 @@
               
      
              // Add button click handler
-             .on('click', '.labButton', function() {
-                 var $template = $('#labTemplate'),
-                     $clone    = $template
-                                     .clone()
-                                     .removeClass('hide')
-                                     .removeAttr('id')
-                                     .insertBefore($template),
-                     $option   = $clone.find('[name="option[]"]');
+            //  .on('click', '.labButton', function() {
+            //      var $template = $('#labTemplate'),
+            //          $clone    = $template
+            //                          .clone()
+            //                          .removeClass('hide')
+            //                          .removeAttr('id')
+            //                          .insertBefore($template),
+            //          $option   = $clone.find('[name="option[]"]');
      
-                 // Add new field
-             })
+            //      // Add new field
+            //  })
      
-             // Remove button click handler
-             .on('click', '.labButtoon', function() {
-                 var $row    = $(this).parents('.form-group'),
-                     $option = $row.find('[name="option[]"]');
+            //  // Remove button click handler
+            //  .on('click', '.labButtoon', function() {
+            //      var $row    = $(this).parents('.form-group'),
+            //          $option = $row.find('[name="option[]"]');
      
-                 // Remove element containing the option
-                 $row.remove();
+            //      // Remove element containing the option
+            //      $row.remove();
      
-                 // Remove field 
-             })
+            //      // Remove field 
+            //  })
      
              // Called after adding new field
              .on('added.field.fv', function(e, data) {
