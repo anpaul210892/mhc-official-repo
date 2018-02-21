@@ -57,8 +57,8 @@
                                             <div class="dw-user-box">
                                                 <div class="u-img"><img src="assets/images/users/1.jpg" alt="user"></div>
                                                 <div class="u-text">
-                                                    <h4>Rameshwar</h4>
-                                                    <p class="text-muted">info@weblyo.com</p><a href ng-click="redirectToProfile()" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
+                                                    <h4>{{user.name}}</h4>
+                                                    <p class="text-muted">{{user.email}}</p><a href ng-click="redirectToProfile()" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
                                             </div>
                                         </li>
                                         <li role="separator" class="divider"></li>
@@ -97,7 +97,7 @@
                         <!-- User profile image -->
                         <div class="profile-img"> <img src="assets/images/users/profile.png"  alt="user" /> </div>
                         <!-- User profile text-->
-                        <div class="profile-text"><a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Rameshwar</a>
+                        <div class="profile-text"><a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">{{user.name}}</a>
                         </div>
                     </div>
                     <!-- End User profile text-->
@@ -239,7 +239,7 @@
                              <div class="card"> <img class="" src="assets/images/background/profile-bg.jpg" alt="Card image cap">
                                 <div class="card-body little-profile text-center">
                                     <div class="pro-img"><img src="assets/images/users/4.jpg" alt="user"></div>
-                                    <h3 class="m-b-0">Rameshwar</h3>
+                                    <h3 class="m-b-0">{{user.name}}</h3>
                                     <p>Web Designer &amp; Developer</p>
                                     <p><small>Lorem ipsum dolor sit amet, this is a consectetur adipisicing elit Lorem ipsum dolor sit amet, this is a consectetur</small></p> 
                                      
@@ -363,7 +363,7 @@
                                                     <td style="width:50px;"><span class="round">R</span></td>
                                                     <td>
                                                         <h6>Raj</h6><small class="text-muted">Premium Member</small></td>
-                                                    <td>Rameshwar</td>
+                                                    <td>{{user.name}}</td>
                                                     <td>info@mhc.com</td>
                                                     <td>9012345678</td>
                                                     <td>ZEN259</td>
@@ -371,7 +371,7 @@
                                                 <tr class="active">
                                                     <td><span class="round"><img src="assets/images/users/2.jpg" alt="user" width="50"></span></td>
                                                     <td>
-                                                        <h6>Rameshwar</h6><small class="text-muted">Web Developer</small></td>
+                                                        <h6>{{user.name}}</h6><small class="text-muted">Web Developer</small></td>
                                                     <td>Ravi</td>
                                                     <td>info@mhc.com</td>
                                                     <td>9012345678</td>

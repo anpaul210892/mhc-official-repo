@@ -21,6 +21,13 @@
                     if (user) {
                         var email = user.email;
                         var uid = user.uid;
+                        user.updateProfile({
+                            displayName: $scope.formData.username
+                        }).then(function() {
+                            // Update successful.
+                        }, function(error) {
+                            // An error happened.
+                        });
                         database.ref('/mhcUsers/' + uid).set({
                             email: $scope.formData.email,
                             name: $scope.formData.username,
@@ -34,6 +41,12 @@
                             state: "",
                             zipCode: "",
                             accessRole: "customer"
+                        });
+                        
+                        user.sendEmailVerification().then(function() {
+                          // Email sent.
+                        }).catch(function(error) {
+                          // An error happened.
                         });
                         window.location.href="#/login"
                         }

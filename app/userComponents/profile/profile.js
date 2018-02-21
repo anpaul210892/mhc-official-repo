@@ -23,27 +23,26 @@
                 $location.path("/admin");
             }
             $scope.changeSideBar = function(device){
-                
-                                if(device === 'desktop') {
-                                    if ($("body").hasClass("mini-sidebar")) {
-                                        $("body").trigger("resize");
-                                        $(".scroll-sidebar, .slimScrollDiv").css("overflow", "hidden").parent().css("overflow", "visible");
-                                        $("body").removeClass("mini-sidebar");
-                                        $('.navbar-brand span').show();
-                                        //$(".sidebartoggler i").addClass("ti-menu");
-                                    } else {
-                                        $("body").trigger("resize");
-                                        $(".scroll-sidebar, .slimScrollDiv").css("overflow-x", "visible").parent().css("overflow", "visible");
-                                        $("body").addClass("mini-sidebar");
-                                        $('.navbar-brand span').hide();
-                                        //$(".sidebartoggler i").removeClass("ti-menu");
-                                    }
-                                } else {
-                                        $("body").toggleClass("show-sidebar");
-                                        $(".nav-toggler i").toggleClass("ti-menu");
-                                        $(".nav-toggler i").addClass("ti-close");
-                                }
-                            };
+                if(device === 'desktop') {
+                    if ($("body").hasClass("mini-sidebar")) {
+                        $("body").trigger("resize");
+                        $(".scroll-sidebar, .slimScrollDiv").css("overflow", "hidden").parent().css("overflow", "visible");
+                        $("body").removeClass("mini-sidebar");
+                        $('.navbar-brand span').show();
+                        //$(".sidebartoggler i").addClass("ti-menu");
+                    } else {
+                        $("body").trigger("resize");
+                        $(".scroll-sidebar, .slimScrollDiv").css("overflow-x", "visible").parent().css("overflow", "visible");
+                        $("body").addClass("mini-sidebar");
+                        $('.navbar-brand span').hide();
+                        //$(".sidebartoggler i").removeClass("ti-menu");
+                    }
+                } else {
+                        $("body").toggleClass("show-sidebar");
+                        $(".nav-toggler i").toggleClass("ti-menu");
+                        $(".nav-toggler i").addClass("ti-close");
+                }
+            };
             $scope.redirecttoAmin = function() {
                 $location.path("/admin");
             }

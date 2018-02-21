@@ -6,7 +6,7 @@
                     <h3 class="box-title m-b-20">Sign Up</h3>
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <input class="form-control" type="text" required="" placeholder="Name"  name="username" ng-model="formData.username" ng-minlength="5" ng-maxlength="20" ng-pattern="/^[A-z][A-z0-9]*$/">
+                            <input class="form-control" type="text" required="" placeholder="Name"  name="username" ng-model="formData.username" ng-minlength="5" ng-maxlength="20" ng-pattern="/^[\w -]*$/">
                             <span ng-show="loginform.username.$error.required && loginform.username.$dirty">required</span>
                             <span ng-show="!loginform.username.$error.minLength && !loginform.username.$error.maxLength && loginform.username.$error.pattern && loginform.username.$dirty">Must start with a letter, and contain letters &amp; numbers only.</span>
                             <span ng-show="!loginform.username.$error.required && (loginform.username.$error.minlength || loginform.username.$error.maxlength) && loginform.username.$dirty">Username ust be between 5 and 20 characters.</span>

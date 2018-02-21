@@ -4,9 +4,10 @@
     angular.module('myApp.login', [])
     .controller('loginCtrl', loginCtrl);
     
-    loginCtrl.$inject = ['$scope', '$remember', '$location'];
-    function loginCtrl($scope, $remember, $location) {
-
+    loginCtrl.$inject = ['$scope', '$remember', '$location','$timeout','$rootScope', '$sce'];
+    function loginCtrl($scope, $remember, $location, $timeout, $rootScope, $sce) {
+        var firebaseInitial=firebase.auth();
+        $scope.emailNotVerified = false;
         $scope.remember = false;
         if ($remember('username') && $remember('password') ) {
             $scope.remember = true;
@@ -118,9 +119,21 @@
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
       };
-        $scope.login = function(){
-            firebase.auth().signInWithEmailAndPassword($scope.email, $scope.password).then(function(user) {
-                $location.path("/admin");
+        $scope.login = function() {
+            firebaseInitial.signInWithEmailAndPassword($scope.email, $scope.password).then(function(user) {
+                if(user.emailVerified === false){
+                    firebase.database().ref('/mhcUsers/' + user.uid).once('value').then(function(snapshot) {
+                        $rootScope.user =  snapshot.val();
+                        $rootScope.user.addressMapUrl=$sce.trustAsResourceUrl("https://www.google.com/maps?q=["+$rootScope.user.address+" "+$rootScope.user.zipCode+"]&output=embed");                        
+                      });
+                    $location.path("/admin");
+                } else {
+                    $scope.emailNotVerified = true;
+                    $timeout( function(){
+                        $scope.emailNotVerified = false;
+                    }, 3000 );
+                    
+                }
             }, function(error) {
                 var errorCode = error.code;
                 var errorMessage = error.message;

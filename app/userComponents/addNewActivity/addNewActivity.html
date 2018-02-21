@@ -1,621 +1,621 @@
 <div class="fix-header card-no-border">
-    <!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- ============================================================== -->
-    <div id="main-wrapper">
         <!-- ============================================================== -->
-        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- Main wrapper - style you can find in pages.scss -->
         <!-- ============================================================== -->
-        <header class="topbar">
-            <nav class="navbar top-navbar navbar-expand-md navbar-light">
-                <!-- ============================================================== -->
-                <!-- Logo -->
-                <!-- ============================================================== -->
-                <div class="navbar-header">
-                    <a class="navbar-brand" href ng-click="logoClick()">
-                        <!-- Logo icon -->
-                        <b> 
-                            <!-- Dark Logo icon -->
-                            <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
-                            <!-- Light Logo icon -->
-                            <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
-                        </b>
-                        <!--End Logo icon -->
-                        <!-- Logo text -->
-                        <span>
-                         <!-- dark Logo text -->
-                         <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-                         <!-- Light Logo text -->    
-                         <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
-                </div>
-                <!-- ============================================================== -->
-                <!-- End Logo -->
-                <!-- ============================================================== -->
-                <div class="navbar-collapse">
-                    <ul class="navbar-nav mr-auto mt-md-0">
-                       <!-- This is  -->
-                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href ng-click="changeSideBar('mobile')"><i class="mdi mdi-menu"></i></a> </li>
-                        <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href ng-click="changeSideBar('desktop')"><i class="ti-menu"></i></a> </li>  
-                        
-                        
-                    </ul>
-                    
-                    <ul class="navbar-nav my-lg-0">
-                       
-                        <!-- ============================================================== -->
-                        <!-- Profile -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
-                            <div class="dropdown-menu dropdown-menu-right scale-up">
-                                <ul class="dropdown-user">
-                                    <li>
-                                        <div class="dw-user-box">
-                                            <div class="u-img"><img src="assets/images/users/1.jpg" alt="user"></div>
-                                            <div class="u-text">
-                                                <h4>Rameshwar</h4>
-                                                <p class="text-muted">info@weblyo.com</p><a href ng-click="redirectToProfile()" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
-                                        </div>
-                                    </li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a ng-click="redirectToProfile()"><i class="ti-user"></i> My Profile</a></li>
-                                     
-                                     
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href ng-click="logout()"><i class="fa fa-power-off"></i> Logout</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <!-- ============================================================== -->
-                        <!-- Flag -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="flag-icon flag-icon-in"></i></a>
-                                
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <!-- ============================================================== -->
-        <!-- End Topbar header -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
-        <aside class="left-sidebar">
-            <!-- Sidebar scroll-->
-            <div class="scroll-sidebar">
-                <!-- User profile -->
-                <div class="user-profile" style="background: url(assets/images/background/user-info.jpg) no-repeat;">
-                    <!-- User profile image -->
-                    <div class="profile-img"> <img src="assets/images/users/profile.png" alt="user" /> </div>
-                    <!-- User profile text-->
-                    <div class="profile-text"> <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Rameshwar</a>
-
+        <div id="main-wrapper">
+            <!-- ============================================================== -->
+            <!-- Topbar header - style you can find in pages.scss -->
+            <!-- ============================================================== -->
+            <header class="topbar">
+                <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href ng-click="logoClick()">
+                            <!-- Logo icon -->
+                            <b> 
+                                <!-- Dark Logo icon -->
+                                <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                                <!-- Light Logo icon -->
+                                <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                            </b>
+                            <!--End Logo icon -->
+                            <!-- Logo text -->
+                            <span>
+                             <!-- dark Logo text -->
+                             <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                             <!-- Light Logo text -->    
+                             <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
                     </div>
-                </div>
-                <!-- End User profile text-->
-                <!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="nav-small-cap">PERSONAL</li>
-                        <li>
-                            <a class="waves-effect waves-dark" href ng-click="redirecttoAmin()" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a>
-                             
-                        </li>
-                        <li class="active">
-                            <a class="waves-effect waves-dark active" href aria-expanded="false"><i class="mdi mdi-dns"></i><span class="hide-menu">Add New Activity </span></a>
-                             
-                        </li>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <div class="navbar-collapse">
+                        <ul class="navbar-nav mr-auto mt-md-0">
+                           <!-- This is  -->
+                            <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href ng-click="changeSideBar('mobile')"><i class="mdi mdi-menu"></i></a> </li>
+                            <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href ng-click="changeSideBar('desktop')"><i class="ti-menu"></i></a> </li>  
+                            
+                            
+                        </ul>
                         
-                        
-                    </ul>
+                        <ul class="navbar-nav my-lg-0">
+                           
+                            <!-- ============================================================== -->
+                            <!-- Profile -->
+                            <!-- ============================================================== -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
+                                <div class="dropdown-menu dropdown-menu-right scale-up">
+                                    <ul class="dropdown-user">
+                                        <li>
+                                            <div class="dw-user-box">
+                                                <div class="u-img"><img src="assets/images/users/1.jpg" alt="user"></div>
+                                                <div class="u-text">
+                                                    <h4>{{user.name}}</h4>
+                                                    <p class="text-muted">{{user.email}}</p><a href ng-click="redirectToProfile()" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
+                                            </div>
+                                        </li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a ng-click="redirectToProfile()"><i class="ti-user"></i> My Profile</a></li>
+                                         
+                                         
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href ng-click="logout()"><i class="fa fa-power-off"></i> Logout</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- ============================================================== -->
+                            <!-- Flag -->
+                            <!-- ============================================================== -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="flag-icon flag-icon-in"></i></a>
+                                    
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
-                <!-- End Sidebar navigation -->
-            </div>
-            <!-- End Sidebar scroll-->
-            <!-- Bottom points-->
-            <!-- End Bottom points-->
-        </aside>
-        <!-- ============================================================== -->
-        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Page wrapper  -->
-        <!-- ============================================================== -->
-        <div class="page-wrapper">
+            </header>
             <!-- ============================================================== -->
-            <!-- Container fluid  -->
+            <!-- End Topbar header -->
             <!-- ============================================================== -->
-            <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- Bread crumb and right sidebar toggle -->
-                <!-- ============================================================== -->
-                <div class="row page-titles">
-                    <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor m-b-0 m-t-0"> </h3>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Add New Activity</li>
-                        </ol>
+            <!-- ============================================================== -->
+            <!-- Left Sidebar - style you can find in sidebar.scss  -->
+            <!-- ============================================================== -->
+            <aside class="left-sidebar">
+                <!-- Sidebar scroll-->
+                <div class="scroll-sidebar">
+                    <!-- User profile -->
+                    <div class="user-profile" style="background: url(assets/images/background/user-info.jpg) no-repeat;">
+                        <!-- User profile image -->
+                        <div class="profile-img"> <img src="assets/images/users/profile.png" alt="user" /> </div>
+                        <!-- User profile text-->
+                        <div class="profile-text"> <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">{{user.name}}</a>
+    
+                        </div>
                     </div>
-                    <div class="col-md-7 col-4 align-self-center">
-                        <div class="d-flex m-t-10 justify-content-end">
-                            <div class="d-flex m-r-20 m-l-10 hidden-md-down">
-                                <div class="chart-text m-r-10">
-                                    <h6 class="m-b-0"><small>THIS MONTH</small></h6>
-                                    <h4 class="m-t-0 text-info">$58,356</h4></div>
-                                <div class="spark-chart">
-                                    <div id="monthchart"></div>
+                    <!-- End User profile text-->
+                    <!-- Sidebar navigation-->
+                    <nav class="sidebar-nav">
+                        <ul id="sidebarnav">
+                            <li class="nav-small-cap">PERSONAL</li>
+                            <li>
+                                <a class="waves-effect waves-dark" href ng-click="redirecttoAmin()" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a>
+                                 
+                            </li>
+                            <li class="active">
+                                <a class="waves-effect waves-dark active" href aria-expanded="false"><i class="mdi mdi-dns"></i><span class="hide-menu">Add New Activity </span></a>
+                                 
+                            </li>
+                            
+                            
+                        </ul>
+                    </nav>
+                    <!-- End Sidebar navigation -->
+                </div>
+                <!-- End Sidebar scroll-->
+                <!-- Bottom points-->
+                <!-- End Bottom points-->
+            </aside>
+            <!-- ============================================================== -->
+            <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Page wrapper  -->
+            <!-- ============================================================== -->
+            <div class="page-wrapper">
+                <!-- ============================================================== -->
+                <!-- Container fluid  -->
+                <!-- ============================================================== -->
+                <div class="container-fluid">
+                    <!-- ============================================================== -->
+                    <!-- Bread crumb and right sidebar toggle -->
+                    <!-- ============================================================== -->
+                    <div class="row page-titles">
+                        <div class="col-md-5 col-8 align-self-center">
+                            <h3 class="text-themecolor m-b-0 m-t-0"> </h3>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                                <li class="breadcrumb-item active">Add New Activity</li>
+                            </ol>
+                        </div>
+                        <div class="col-md-7 col-4 align-self-center">
+                            <div class="d-flex m-t-10 justify-content-end">
+                                <div class="d-flex m-r-20 m-l-10 hidden-md-down">
+                                    <div class="chart-text m-r-10">
+                                        <h6 class="m-b-0"><small>THIS MONTH</small></h6>
+                                        <h4 class="m-t-0 text-info">$58,356</h4></div>
+                                    <div class="spark-chart">
+                                        <div id="monthchart"></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="d-flex m-r-20 m-l-10 hidden-md-down">
-                                <div class="chart-text m-r-10">
-                                    <h6 class="m-b-0"><small>LAST MONTH</small></h6>
-                                    <h4 class="m-t-0 text-primary">$48,356</h4></div>
-                                <div class="spark-chart">
-                                    <div id="lastmonthchart"></div>
+                                <div class="d-flex m-r-20 m-l-10 hidden-md-down">
+                                    <div class="chart-text m-r-10">
+                                        <h6 class="m-b-0"><small>LAST MONTH</small></h6>
+                                        <h4 class="m-t-0 text-primary">$48,356</h4></div>
+                                    <div class="spark-chart">
+                                        <div id="lastmonthchart"></div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="">
-                                <button class="right-side-toggle waves-effect waves-light btn-success btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
+                                <div class="">
+                                    <button class="right-side-toggle waves-effect waves-light btn-success btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- ============================================================== -->
-                <!--right sidebar toggle -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Start Page Content -->
-                <!-- ============================================================== -->
-                                     
-                <!-- .row -->
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="card card-body">
-                            <h4 class="card-title">Add New Activity</h4> 
-                            <form id="surveyForm" class="form-horizontal m-t-40" method="post" novalidate>
-                                <div class="form-group">
-                                    <label>Event Title<span class="help"> </span></label>
-                                    <input type="text" required class="form-control" placeholder="Wirte your event title name">
-                                </div>
-                                <div class="form-group">
-                                    <label>Event type</label>
-                                    <select class="custom-select col-12" id="inlineFormCustomSelect">
-                                        <option selected>Choose...</option>
-                                        <option value="1">Parties & Nightlife</option>
-                                        <option value="2">Food & Dining</option>
-                                        <option value="3">Arts & Culture</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Alternate Event type 1</label>
-                                    <select class="custom-select col-12" id="inlineFormCustomSelect">
-                                        <option selected>Choose...</option>
-                                        <option value="1">Parties & Nightlife</option>
-                                        <option value="2">Food & Dining</option>
-                                        <option value="3">Arts & Culture</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Alternate Event type 2</label>
-                                    <select class="custom-select col-12" id="inlineFormCustomSelect">
-                                        <option selected>Choose...</option>
-                                        <option value="1">Parties & Nightlife</option>
-                                        <option value="2">Food & Dining</option>
-                                        <option value="3">Arts & Culture</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                        <label>Event Description</label>
-                                        <textarea ui-tinymce="tinymceOptions" ng-model="tinymceModel"></textarea>
+                    <!-- ============================================================== -->
+                    <!--right sidebar toggle -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Start Page Content -->
+                    <!-- ============================================================== -->
+                                         
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card card-body">
+                                <h4 class="card-title">Add New Activity</h4> 
+                                <form id="surveyForm" class="form-horizontal m-t-40" method="post" novalidate>
+                                    <div class="form-group">
+                                        <label>Event Title<span class="help"> </span></label>
+                                        <input type="text" required class="form-control" placeholder="Wirte your event title name">
                                     </div>
+                                    <div class="form-group">
+                                        <label>Event type</label>
+                                        <select class="custom-select col-12" id="inlineFormCustomSelect">
+                                            <option selected>Choose...</option>
+                                            <option value="1">Parties & Nightlife</option>
+                                            <option value="2">Food & Dining</option>
+                                            <option value="3">Arts & Culture</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Alternate Event type 1</label>
+                                        <select class="custom-select col-12" id="inlineFormCustomSelect">
+                                            <option selected>Choose...</option>
+                                            <option value="1">Parties & Nightlife</option>
+                                            <option value="2">Food & Dining</option>
+                                            <option value="3">Arts & Culture</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Alternate Event type 2</label>
+                                        <select class="custom-select col-12" id="inlineFormCustomSelect">
+                                            <option selected>Choose...</option>
+                                            <option value="1">Parties & Nightlife</option>
+                                            <option value="2">Food & Dining</option>
+                                            <option value="3">Arts & Culture</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                            <label>Event Description</label>
+                                            <textarea ui-tinymce="tinymceOptions" ng-model="tinymceModel"></textarea>
+                                        </div>
+                                        <div class="row form-material">
+                                                <div class="col-md-12">
+                                                  <label>Add New Label</label> <button ng-click="clonerow()" type="button" class="btn btn-default labButton"><i class="fa fa-plus"></i></button>
+                                                </div> 
+                                            </div> 
+                                            <!-- containing an text field and a Remove button -->
+                                            <div class="form-group hide" id="labTemplate">
+                                              <div class="row form-material">
+                                                   <div class="col-md-11">
+                                                    <input type="text" required class="form-control" placeholder="Wirte your Label Name"><br>
+                                                    <textarea ui-tinymce="tinymceOptions" ng-model="tinymceModeli"></textarea>
+                                                   </div>
+                                                   <div class="col-md-1" id="button">
+                                                    <button type="button" ng-click="cloneremove($event)" class="btn btn-default labButtoon"><i class="fa fa-minus"></i></button>
+                                                   </div> 
+                                             </div>
+                                            </div>
+                                    <fieldset class="form-group">
+                                        <label>Header Image</label>
+                                        <label class="custom-file d-block">
+                                            <input type="file" id="file" class="custom-file-input">
+                                            <span class="custom-file-control"></span>
+                                        </label>
+                                    </fieldset>
+                                    <div class="form-group">
+                                        <label>Carousel image 1</label>
+                                        <input type="file" class="form-control" id="exampleInputFile" aria-describedby="fileHelp">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Carousel image 2</label>
+                                        <input type="file" class="form-control" id="exampleInputFile" aria-describedby="fileHelp">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Carousel image 3</label>
+                                        <input type="file" class="form-control" id="exampleInputFile" aria-describedby="fileHelp">
+                                    </div>
+                                    <div class="form-group switch">
+                                                <label><b><big>Time Type:</big></b></label>
+                                                <label>One -Time
+                                                    <input type="checkbox" ng-model="checked" ng-click="showSingleMultiple()" id="timetype"><span class="lever"></span>Multiple Slots</label>
+                                    </div>
+                                    <div class="card">
+                                    <div class="card-body">  
                                     <div class="row form-material">
-                                            <div class="col-md-12">
-                                              <label>Add New Label</label> <button ng-click="clonerow()" type="button" class="btn btn-default labButton"><i class="fa fa-plus"></i></button>
+                                        <div class="row onetime" id="onetime">
+                                           <div class="col-md-1">  
+                                           </div>
+                                           <div class="col-md-5"> 
+                                           <label class="m-t-40">Start Date Time</label>
+                                           <input type="text" id="start-date" class="form-control" placeholder="DD/MM/YYYY - HH:mm">
+                                           </div>
+                                           <div class="col-md-5">
+                                           <label class="m-t-40">End Date Time</label>
+                                           <input type="text" id="end-date" class="form-control" placeholder="DD/MM/YYYY - HH:mm">
+                                           </div>
+                                        </div> 
+                                        <div class="col-md-12 mtime"  id="mtime"  style="display: none">
+                                            <div class="row">
+                                                   <div class="col-md-6">
+                                                           <h5 class="box-title m-t-30">Start Date</h5>
+                                                           <input type="text" class="form-control mydatepicker" placeholder="DD/MM/YYYY">
+                                                   </div>
+                                                    <div class="col-md-6">
+                                                           <h5 class="box-title m-t-30">End Date</h5>
+                                                           <input type="text" class="form-control mydatepicker" placeholder="DD/MM/YYYY">
+                                                   </div>                                                
+                                            </div><br>
+                                        <div class="row form-material">
+                                            <div class="col-md-2">
+                                             <input type="checkbox" class="check" id="minimal-checkbox-1" /><label for="minimal-checkbox-1">Monday</label>
+                                             </div>
+                                             <div class="col-md-2"> 
+                                               <label>Start Time</label>
+                                               <input type="time" class="form-control" value="08:00"/> 
+                                            </div> 
+                                            <div class="col-md-2">
+                                               <label>End Time</label>
+                                                <input type="time" class="form-control" value="12:00"/>
+                                            </div> 
+                                            <div class="col-md-1">
+                                              <button ng-click="clonemon()" type="button" class="btn btn-default monButton"><i class="fa fa-plus"></i></button>
                                             </div> 
                                         </div> 
                                         <!-- containing an text field and a Remove button -->
-                                        <div class="form-group hide" id="labTemplate">
-                                          <div class="row form-material" id="templateToClone">
-                                               <div class="col-md-11">
-                                                <input type="text" required class="form-control" placeholder="Wirte your Label Name"><br>
-                                                <textarea ui-tinymce="tinymceOptions" ng-model="tinymceModeli"></textarea>
+                                        <div class="form-group hide" id="monTemplate">
+                                          <div class="row form-material">
+                                               <div class="col-md-2"> 
                                                </div>
-                                               <div class="col-md-1" id="button">
-                                                <button type="button" ng-click="cloneremove($event)" class="btn btn-default labButtoon"><i class="fa fa-minus"></i></button>
+                                                <div class="col-md-2"> 
+                                                  <input type="time" class="form-control" value="08:00"/> 
                                                </div> 
+                                               <div class="col-md-2">
+                                                   <input type="time" class="form-control" value="12:00"/>
+                                               </div> 
+                                               <div class="col-md-1">
+                                                <button ng-click="monremove($event)" type="button" class="btn btn-default monButtoon"><i class="fa fa-minus"></i></button>
+                                               </div>
                                          </div>
                                         </div>
-                                <fieldset class="form-group">
-                                    <label>Header Image</label>
-                                    <label class="custom-file d-block">
-                                        <input type="file" id="file" class="custom-file-input">
-                                        <span class="custom-file-control"></span>
-                                    </label>
-                                </fieldset>
-                                <div class="form-group">
-                                    <label>Carousel image 1</label>
-                                    <input type="file" class="form-control" id="exampleInputFile" aria-describedby="fileHelp">
-                                </div>
-                                <div class="form-group">
-                                    <label>Carousel image 2</label>
-                                    <input type="file" class="form-control" id="exampleInputFile" aria-describedby="fileHelp">
-                                </div>
-                                <div class="form-group">
-                                    <label>Carousel image 3</label>
-                                    <input type="file" class="form-control" id="exampleInputFile" aria-describedby="fileHelp">
-                                </div>
-                                <div class="form-group switch">
-                                            <label><b><big>Time Type:</big></b></label>
-                                            <label>One -Time
-                                                <input type="checkbox" ng-model="checked" ng-click="showSingleMultiple()" id="timetype"><span class="lever"></span>Multiple Slots</label>
-                                </div>
-								<div class="card">
-                                <div class="card-body">  
-                                <div class="row form-material">
-                                    <div class="row onetime" id="onetime">
-									   <div class="col-md-1">  
-									   </div>
-                                       <div class="col-md-5"> 
-                                       <label class="m-t-40">Start Date Time</label>
-                                       <input type="text" id="start-date" class="form-control" placeholder="DD/MM/YYYY - HH:mm">
-									   </div>
-									   <div class="col-md-5">
-									   <label class="m-t-40">End Date Time</label>
-                                       <input type="text" id="end-date" class="form-control" placeholder="DD/MM/YYYY - HH:mm">
-                                       </div>
-                                    </div> 
-                                    <div class="col-md-12 mtime"  id="mtime"  style="display: none">
-                                        <div class="row">
-                                               <div class="col-md-6">
-                                                       <h5 class="box-title m-t-30">Start Date</h5>
-                                                       <input type="text" class="form-control mydatepicker" placeholder="DD/MM/YYYY">
+                                        <!-- Tuesday -->
+                                        <div class="row form-material">
+                                            <div class="col-md-2">
+                                             <input type="checkbox" class="check" id="minimal-checkbox-2" value="Bike" /><label for="minimal-checkbox-2">Tuesday</label>
+                                             </div>
+                                             <div class="col-md-2"> 
+                                               <label>Start Time</label>
+                                               <input type="time" class="form-control" value="08:00"/> 
+                                            </div> 
+                                            <div class="col-md-2">
+                                               <label>End Time</label>
+                                                <input type="time" class="form-control" value="12:00"/>
+                                            </div> 
+                                            <div class="col-md-1">
+                                              <button type="button" ng-click="clonetue()" class="btn btn-default tueButton"><i class="fa fa-plus"></i></button>
+                                            </div> 
+                                        </div>
+                                        <!-- containing an text field and a Remove button -->
+                                        <div class="form-group hide" id="tueTemplate">
+                                          <div class="row form-material">
+                                               <div class="col-md-2"> 
                                                </div>
-                                                <div class="col-md-6">
-                                                       <h5 class="box-title m-t-30">End Date</h5>
-                                                       <input type="text" class="form-control mydatepicker" placeholder="DD/MM/YYYY">
-                                               </div>                                                
-                                        </div><br>
-                                    <div class="row form-material">
-		                                <div class="col-md-2">
-                                         <input type="checkbox" class="check" id="minimal-checkbox-1" /><label for="minimal-checkbox-1">Monday</label>
-	                             		</div>
-	                             		<div class="col-md-2"> 
-										   <label>Start Time</label>
-                                           <input type="time" class="form-control" value="08:00"/> 
-                                        </div> 
-										<div class="col-md-2">
-										   <label>End Time</label>
-	                             		   <input type="time" class="form-control" value="12:00"/>
-                                        </div> 
-		                                <div class="col-md-1">
-                                          <button type="button" class="btn btn-default monButton"><i class="fa fa-plus"></i></button>
-                                        </div> 
-                                    </div> 
-									<!-- containing an text field and a Remove button -->
-                                    <div class="form-group hide" id="monTemplate">
-                                      <div class="row form-material">
-								           <div class="col-md-2"> 
-                                           </div>
-	                                	    <div class="col-md-2"> 
-                                              <input type="time" class="form-control" value="08:00"/> 
-                                           </div> 
-								  	 	<div class="col-md-2">
-	                                		   <input type="time" class="form-control" value="12:00"/>
-                                           </div> 
-                                           <div class="col-md-1">
-                                            <button type="button" class="btn btn-default monButtoon"><i class="fa fa-minus"></i></button>
-                                           </div>
-                                     </div>
-	                                </div>
-									<!-- Tuesday -->
-									<div class="row form-material">
-		                                <div class="col-md-2">
-                                         <input type="checkbox" class="check" id="minimal-checkbox-2" value="Bike" /><label for="minimal-checkbox-2">Tuesday</label>
-	                             		</div>
-	                             		<div class="col-md-2"> 
-										   <label>Start Time</label>
-                                           <input type="time" class="form-control" value="08:00"/> 
-                                        </div> 
-										<div class="col-md-2">
-										   <label>End Time</label>
-	                             		   <input type="time" class="form-control" value="12:00"/>
-                                        </div> 
-		                                <div class="col-md-1">
-                                          <button type="button" class="btn btn-default tueButton"><i class="fa fa-plus"></i></button>
-                                        </div> 
-                                    </div>
-									<!-- containing an text field and a Remove button -->
-                                    <div class="form-group hide" id="tueTemplate">
-                                      <div class="row form-material">
-								           <div class="col-md-2"> 
-                                           </div>
-	                                	    <div class="col-md-2"> 
-                                              <input type="time" class="form-control" value="08:00"/> 
-                                           </div> 
-								  	 	<div class="col-md-2">
-	                                		   <input type="time" class="form-control" value="12:00"/>
-                                           </div> 
-                                           <div class="col-md-1">
-                                            <button type="button" class="btn btn-default tueButtoon"><i class="fa fa-minus"></i></button>
-                                           </div>
-                                     </div>
-	                                </div>
-									
-									<!-- Wednesday -->
-									<div class="row form-material">
-		                                <div class="col-md-2">
-                                         <input type="checkbox" class="check" id="minimal-checkbox-3"><label for="minimal-checkbox-3">Wednesday</label>
-	                             		</div>
-	                             		<div class="col-md-2"> 
-										   <label>Start Time</label>
-                                           <input type="time" class="form-control" value="08:00"/> 
-                                        </div> 
-										<div class="col-md-2">
-										   <label>End Time</label>
-	                             		   <input type="time" class="form-control" value="12:00"/>
-                                        </div> 
-		                                <div class="col-md-1">
-                                          <button type="button" class="btn btn-default wedButton"><i class="fa fa-plus"></i></button>
-                                        </div> 
-                                    </div>
-									<!-- containing an text field and a Remove button -->
-                                    <div class="form-group hide" id="wedTemplate">
-                                      <div class="row form-material">
-								           <div class="col-md-2"> 
-                                           </div>
-	                                	    <div class="col-md-2"> 
-                                              <input type="time" class="form-control" value="08:00"/> 
-                                           </div> 
-								  	 	<div class="col-md-2">
-	                                		   <input type="time" class="form-control" value="12:00"/>
-                                           </div> 
-                                           <div class="col-md-1">
-                                            <button type="button" class="btn btn-default wedButtoon"><i class="fa fa-minus"></i></button>
-                                           </div>
-                                     </div>
-	                                </div>
-									
-									
-									<!-- Thursday -->
-									<div class="row form-material">
-		                                <div class="col-md-2">
-                                         <input type="checkbox" class="check" id="minimal-checkbox-4"><label for="minimal-checkbox-4">Thursday</label>
-	                             		</div>
-	                             		<div class="col-md-2"> 
-										   <label>Start Time</label>
-                                           <input type="time" class="form-control" value="08:00"/> 
-                                        </div> 
-										<div class="col-md-2">
-										   <label>End Time</label>
-	                             		   <input type="time" class="form-control" value="12:00"/>
-                                        </div> 
-		                                <div class="col-md-1">
-                                          <button type="button" class="btn btn-default thuButton"><i class="fa fa-plus"></i></button>
-                                        </div> 
-                                    </div>
-									<!-- containing an text field and a Remove button -->
-                                    <div class="form-group hide" id="thuTemplate">
-                                      <div class="row form-material">
-								           <div class="col-md-2"> 
-                                           </div>
-	                                	    <div class="col-md-2"> 
-                                              <input type="time" class="form-control" value="08:00"/> 
-                                           </div> 
-								  	 	<div class="col-md-2">
-	                                		   <input type="time" class="form-control" value="12:00"/>
-                                           </div> 
-                                           <div class="col-md-1">
-                                            <button type="button" class="btn btn-default thuButtoon"><i class="fa fa-minus"></i></button>
-                                           </div>
-                                     </div>
-	                                </div>
-									
-									<!-- Friday -->
-									<div class="row form-material">
-		                                <div class="col-md-2">
-                                         <input type="checkbox" class="check" id="minimal-checkbox-5"><label for="minimal-checkbox-5">Friday</label>
-	                             		</div>
-	                             		<div class="col-md-2"> 
-										   <label>Start Time</label>
-                                           <input type="time" class="form-control" value="08:00"/> 
-                                        </div> 
-										<div class="col-md-2">
-										   <label>End Time</label>
-	                             		   <input type="time" class="form-control" value="12:00"/>
-                                        </div> 
-		                                <div class="col-md-1">
-                                          <button type="button" class="btn btn-default friButton"><i class="fa fa-plus"></i></button>
-                                        </div> 
-                                    </div>
-									<!-- containing an text field and a Remove button -->
-                                    <div class="form-group hide" id="friTemplate">
-                                      <div class="row form-material">
-								           <div class="col-md-2"> 
-                                           </div>
-	                                	    <div class="col-md-2"> 
-                                              <input type="time" class="form-control" value="08:00"/> 
-                                           </div> 
-								  	 	<div class="col-md-2">
-	                                		   <input type="time" class="form-control" value="12:00"/>
-                                           </div> 
-                                           <div class="col-md-1">
-                                            <button type="button" class="btn btn-default friButtoon"><i class="fa fa-minus"></i></button>
-                                           </div>
-                                     </div>
-	                                </div>
-									
-									<!-- Saturday -->
-									<div class="row form-material">
-		                                <div class="col-md-2">
-                                         <input type="checkbox" class="check" id="minimal-checkbox-6"><label for="minimal-checkbox-6">Saturday</label>
-	                             		</div>
-	                             		<div class="col-md-2"> 
-										   <label>Start Time</label>
-                                           <input type="time" class="form-control" value="08:00"/> 
-                                        </div> 
-										<div class="col-md-2">
-										   <label>End Time</label>
-	                             		   <input type="time" class="form-control" value="12:00"/>
-                                        </div> 
-		                                <div class="col-md-1">
-                                          <button type="button" class="btn btn-default satButton"><i class="fa fa-plus"></i></button>
-                                        </div> 
-                                    </div>
-									<!-- containing an text field and a Remove button -->
-                                    <div class="form-group hide" id="satTemplate">
-                                      <div class="row form-material">
-								           <div class="col-md-2"> 
-                                           </div>
-	                                	    <div class="col-md-2"> 
-                                              <input type="time" class="form-control" value="08:00"/> 
-                                           </div> 
-								  	 	<div class="col-md-2">
-	                                		   <input type="time" class="form-control" value="12:00"/>
-                                           </div> 
-                                           <div class="col-md-1">
-                                            <button type="button" class="btn btn-default satButtoon"><i class="fa fa-minus"></i></button>
-                                           </div>
-                                     </div>
-	                                </div>
-									
-									<!-- Sunday -->
-									<div class="row form-material">
-		                                <div class="col-md-2">
-                                         <input type="checkbox" class="check" id="minimal-checkbox-7"><label for="minimal-checkbox-7">Sunday</label>
-	                             		</div>
-	                             		<div class="col-md-2"> 
-										   <label>Start Time</label>
-                                           <input type="time" class="form-control" value="08:00"/> 
-                                        </div> 
-										<div class="col-md-2">
-										   <label>End Time</label>
-	                             		   <input type="time" class="form-control" value="12:00"/>
-                                        </div> 
-		                                <div class="col-md-1">
-                                          <button type="button" class="btn btn-default sunButton"><i class="fa fa-plus"></i></button>
-                                        </div> 
-                                    </div>
-									<!-- containing an text field and a Remove button -->
-                                    <div class="form-group hide" id="sunTemplate">
-                                      <div class="row form-material">
-								           <div class="col-md-2"> 
-                                           </div>
-	                                	    <div class="col-md-2"> 
-                                              <input type="time" class="form-control" value="08:00"/> 
-                                           </div> 
-								  	 	<div class="col-md-2">
-	                                		   <input type="time" class="form-control" value="12:00"/>
-                                           </div> 
-                                           <div class="col-md-1">
-                                            <button type="button" class="btn btn-default sunButtoon"><i class="fa fa-minus"></i></button>
-                                           </div>
-                                     </div>
-	                                </div>
-
-                                 										
-                                    </div>
-                                </div>
-                                </div>
-                                </div>
-		                        <div class="card">
-                                <div class="card-body">						 
-                                 <div class="row form-material">
-		                                <div class="col-md-2">
-                                         <input class="form-control" type="text" placeholder="Label" />
-	                             		</div>
-	                             		<div class="col-md-2">
-	                             		<input class="form-control" type="number" placeholder="Member Price" />
-	                             		</div>
-										<div class="col-md-3">
-	                             		<input class="form-control" type="number" placeholder="Non-Member Price" />
+                                                <div class="col-md-2"> 
+                                                  <input type="time" class="form-control" value="08:00"/> 
+                                               </div> 
+                                               <div class="col-md-2">
+                                                   <input type="time" class="form-control" value="12:00"/>
+                                               </div> 
+                                               <div class="col-md-1">
+                                                <button type="button" ng-click="tueremove($event)" class="btn btn-default tueButtoon"><i class="fa fa-minus"></i></button>
+                                               </div>
+                                         </div>
                                         </div>
-										<div class="col-md-2">
-	                             		<input class="form-control" type="number" placeholder="Min Booking" />
+                                        
+                                        <!-- Wednesday -->
+                                        <div class="row form-material">
+                                            <div class="col-md-2">
+                                             <input type="checkbox" class="check" id="minimal-checkbox-3"><label for="minimal-checkbox-3">Wednesday</label>
+                                             </div>
+                                             <div class="col-md-2"> 
+                                               <label>Start Time</label>
+                                               <input type="time" class="form-control" value="08:00"/> 
+                                            </div> 
+                                            <div class="col-md-2">
+                                               <label>End Time</label>
+                                                <input type="time" class="form-control" value="12:00"/>
+                                            </div> 
+                                            <div class="col-md-1">
+                                              <button type="button" ng-click="clonewed()" class="btn btn-default wedButton"><i class="fa fa-plus"></i></button>
+                                            </div> 
                                         </div>
-										<div class="col-md-2">
-	                             		<input class="form-control" type="number" placeholder="Max Booking" />
-                                        </div> 
-		                                <div class="col-md-1">
-                                          <button type="button" class="btn btn-default addButton"><i class="fa fa-plus"></i></button>
-                                        </div> 
-                                 </div> 
-
-                                 <!-- containing an text field and a Remove button -->
-                                 <div class="form-group hide" id="optionTemplate">
-                                   <div class="row form-material">
-	                             	    <div class="col-md-2">
-                                         <input class="form-control" type="text" placeholder="Label" />
-	                             		</div>
-	                             		<div class="col-md-2">
-	                             		<input class="form-control" type="number" placeholder="Member Price" />
-	                             		</div>
-										<div class="col-md-3">
-	                             		<input class="form-control" type="number" placeholder="Non-Member Price" />
+                                        <!-- containing an text field and a Remove button -->
+                                        <div class="form-group hide" id="wedTemplate">
+                                          <div class="row form-material">
+                                               <div class="col-md-2"> 
+                                               </div>
+                                                <div class="col-md-2"> 
+                                                  <input type="time" class="form-control" value="08:00"/> 
+                                               </div> 
+                                               <div class="col-md-2">
+                                                   <input type="time" class="form-control" value="12:00"/>
+                                               </div> 
+                                               <div class="col-md-1">
+                                                <button type="button" ng-click="wedremove($event)" class="btn btn-default wedButtoon"><i class="fa fa-minus"></i></button>
+                                               </div>
+                                         </div>
                                         </div>
-										<div class="col-md-2">
-	                             		<input class="form-control" type="number" placeholder="Min Booking" />
+                                        
+                                        
+                                        <!-- Thursday -->
+                                        <div class="row form-material">
+                                            <div class="col-md-2">
+                                             <input type="checkbox" class="check" id="minimal-checkbox-4"><label for="minimal-checkbox-4">Thursday</label>
+                                             </div>
+                                             <div class="col-md-2"> 
+                                               <label>Start Time</label>
+                                               <input type="time" class="form-control" value="08:00"/> 
+                                            </div> 
+                                            <div class="col-md-2">
+                                               <label>End Time</label>
+                                                <input type="time" class="form-control" value="12:00"/>
+                                            </div> 
+                                            <div class="col-md-1">
+                                              <button type="button" ng-click="clonethu()" class="btn btn-default thuButton"><i class="fa fa-plus"></i></button>
+                                            </div> 
                                         </div>
-										<div class="col-md-2">
-	                             		<input class="form-control" type="number" placeholder="Max Booking" />
+                                        <!-- containing an text field and a Remove button -->
+                                        <div class="form-group hide" id="thuTemplate">
+                                          <div class="row form-material">
+                                               <div class="col-md-2"> 
+                                               </div>
+                                                <div class="col-md-2"> 
+                                                  <input type="time" class="form-control" value="08:00"/> 
+                                               </div> 
+                                               <div class="col-md-2">
+                                                   <input type="time" class="form-control" value="12:00"/>
+                                               </div> 
+                                               <div class="col-md-1">
+                                                <button type="button" ng-click="thuremove($event)" class="btn btn-default thuButtoon"><i class="fa fa-minus"></i></button>
+                                               </div>
+                                         </div>
                                         </div>
-                                        <div class="col-md-1">
-                                         <button type="button" class="btn btn-default removeButton"><i class="fa fa-minus"></i></button>
+                                        
+                                        <!-- Friday -->
+                                        <div class="row form-material">
+                                            <div class="col-md-2">
+                                             <input type="checkbox" class="check" id="minimal-checkbox-5"><label for="minimal-checkbox-5">Friday</label>
+                                             </div>
+                                             <div class="col-md-2"> 
+                                               <label>Start Time</label>
+                                               <input type="time" class="form-control" value="08:00"/> 
+                                            </div> 
+                                            <div class="col-md-2">
+                                               <label>End Time</label>
+                                                <input type="time" class="form-control" value="12:00"/>
+                                            </div> 
+                                            <div class="col-md-1">
+                                              <button type="button" ng-click="clonefri()" class="btn btn-default friButton"><i class="fa fa-plus"></i></button>
+                                            </div> 
                                         </div>
-                                  </div>
-	                             </div>
-                                </div>
-								</div>
-                                
-								<div class="form-group switch">
-                                            <label><b><big>Transportation:</big></b></label>
-                                            <label>No
-                                                <input type="checkbox"><span class="lever"></span>Yes</label>
-                                </div>
-	
-                                <div class="text-xs-right">
-                                        <button type="submit" class="btn btn-info">Submit</button>
-                                        <button type="reset" class="btn btn-inverse">Reset</button>
+                                        <!-- containing an text field and a Remove button -->
+                                        <div class="form-group hide" id="friTemplate">
+                                          <div class="row form-material">
+                                               <div class="col-md-2"> 
+                                               </div>
+                                                <div class="col-md-2"> 
+                                                  <input type="time" class="form-control" value="08:00"/> 
+                                               </div> 
+                                               <div class="col-md-2">
+                                                   <input type="time" class="form-control" value="12:00"/>
+                                               </div> 
+                                               <div class="col-md-1">
+                                                <button type="button" ng-click="friremove($event)" class="btn btn-default friButtoon"><i class="fa fa-minus"></i></button>
+                                               </div>
+                                         </div>
+                                        </div>
+                                        
+                                        <!-- Saturday -->
+                                        <div class="row form-material">
+                                            <div class="col-md-2">
+                                             <input type="checkbox" class="check" id="minimal-checkbox-6"><label for="minimal-checkbox-6">Saturday</label>
+                                             </div>
+                                             <div class="col-md-2"> 
+                                               <label>Start Time</label>
+                                               <input type="time" class="form-control" value="08:00"/> 
+                                            </div> 
+                                            <div class="col-md-2">
+                                               <label>End Time</label>
+                                                <input type="time" class="form-control" value="12:00"/>
+                                            </div> 
+                                            <div class="col-md-1">
+                                              <button type="button" ng-click="clonesat()" class="btn btn-default satButton"><i class="fa fa-plus"></i></button>
+                                            </div> 
+                                        </div>
+                                        <!-- containing an text field and a Remove button -->
+                                        <div class="form-group hide" id="satTemplate">
+                                          <div class="row form-material">
+                                               <div class="col-md-2"> 
+                                               </div>
+                                                <div class="col-md-2"> 
+                                                  <input type="time" class="form-control" value="08:00"/> 
+                                               </div> 
+                                               <div class="col-md-2">
+                                                   <input type="time" class="form-control" value="12:00"/>
+                                               </div> 
+                                               <div class="col-md-1">
+                                                <button type="button" ng-click="satremove($event)" class="btn btn-default satButtoon"><i class="fa fa-minus"></i></button>
+                                               </div>
+                                         </div>
+                                        </div>
+                                        
+                                        <!-- Sunday -->
+                                        <div class="row form-material">
+                                            <div class="col-md-2">
+                                             <input type="checkbox" class="check" id="minimal-checkbox-7"><label for="minimal-checkbox-7">Sunday</label>
+                                             </div>
+                                             <div class="col-md-2"> 
+                                               <label>Start Time</label>
+                                               <input type="time" class="form-control" value="08:00"/> 
+                                            </div> 
+                                            <div class="col-md-2">
+                                               <label>End Time</label>
+                                                <input type="time" class="form-control" value="12:00"/>
+                                            </div> 
+                                            <div class="col-md-1">
+                                              <button type="button" ng-click="clonesun()" class="btn btn-default sunButton"><i class="fa fa-plus"></i></button>
+                                            </div> 
+                                        </div>
+                                        <!-- containing an text field and a Remove button -->
+                                        <div class="form-group hide" id="sunTemplate">
+                                          <div class="row form-material">
+                                               <div class="col-md-2"> 
+                                               </div>
+                                                <div class="col-md-2"> 
+                                                  <input type="time" class="form-control" value="08:00"/> 
+                                               </div> 
+                                               <div class="col-md-2">
+                                                   <input type="time" class="form-control" value="12:00"/>
+                                               </div> 
+                                               <div class="col-md-1">
+                                                <button type="button" ng-click="sunremove($event)" class="btn btn-default sunButtoon"><i class="fa fa-minus"></i></button>
+                                               </div>
+                                         </div>
+                                        </div>
+    
+                                                                             
+                                        </div>
                                     </div>
-                            </form>
+                                    </div>
+                                    </div>
+                                    <div class="card">
+                                    <div class="card-body">						 
+                                     <div class="row form-material">
+                                            <div class="col-md-2">
+                                             <input class="form-control" type="text" placeholder="Label" />
+                                             </div>
+                                             <div class="col-md-2">
+                                             <input class="form-control" type="number" placeholder="Member Price" />
+                                             </div>
+                                            <div class="col-md-3">
+                                             <input class="form-control" type="number" placeholder="Non-Member Price" />
+                                            </div>
+                                            <div class="col-md-2">
+                                             <input class="form-control" type="number" placeholder="Min Booking" />
+                                            </div>
+                                            <div class="col-md-2">
+                                             <input class="form-control" type="number" placeholder="Max Booking" />
+                                            </div> 
+                                            <div class="col-md-1">
+                                              <button type="button" ng-click="clonedate()" class="btn btn-default addButton"><i class="fa fa-plus"></i></button>
+                                            </div> 
+                                     </div> 
+    
+                                     <!-- containing an text field and a Remove button -->
+                                     <div class="form-group hide" id="dateTemplate">
+                                       <div class="row form-material">
+                                             <div class="col-md-2">
+                                             <input class="form-control" type="text" placeholder="Label" />
+                                             </div>
+                                             <div class="col-md-2">
+                                             <input class="form-control" type="number" placeholder="Member Price" />
+                                             </div>
+                                            <div class="col-md-3">
+                                             <input class="form-control" type="number" placeholder="Non-Member Price" />
+                                            </div>
+                                            <div class="col-md-2">
+                                             <input class="form-control" type="number" placeholder="Min Booking" />
+                                            </div>
+                                            <div class="col-md-2">
+                                             <input class="form-control" type="number" placeholder="Max Booking" />
+                                            </div>
+                                            <div class="col-md-1">
+                                             <button type="button" ng-click="dateremove($event)" class="btn btn-default removeButton"><i class="fa fa-minus"></i></button>
+                                            </div>
+                                      </div>
+                                     </div>
+                                    </div>
+                                    </div>
+                                    
+                                    <div class="form-group switch">
+                                                <label><b><big>Transportation:</big></b></label>
+                                                <label>No
+                                                    <input type="checkbox"><span class="lever"></span>Yes</label>
+                                    </div>
+        
+                                    <div class="text-xs-right">
+                                            <button type="submit" class="btn btn-info">Submit</button>
+                                            <button type="reset" class="btn btn-inverse">Reset</button>
+                                        </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
+                    <!-- /.row -->
+                    
+                    <!-- ============================================================== -->
+                    <!-- End Page Content -->
+                    <!-- ============================================================== -->
+                     
                 </div>
-                <!-- /.row -->
-                
                 <!-- ============================================================== -->
-                <!-- End Page Content -->
+                <!-- End Container fluid  -->
                 <!-- ============================================================== -->
-                 
+                <!-- ============================================================== -->
+                <!-- footer -->
+                <!-- ============================================================== -->
+                <footer class="footer">
+                    © 2018 MHC Dashboard by weblyo.com
+                </footer>
+                <!-- ============================================================== -->
+                <!-- End footer -->
+                <!-- ============================================================== -->
             </div>
             <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <footer class="footer">
-                © 2018 MHC Dashboard by weblyo.com
-            </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
+            <!-- End Page wrapper  -->
             <!-- ============================================================== -->
         </div>
         <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
+        <!-- End Wrapper -->
         <!-- ============================================================== -->
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
-    <!-- ============================================================== -->
-    
-    </div>
-    
+        <!-- ============================================================== -->
+        <!-- All Jquery -->
+        <!-- ============================================================== -->
+        
+        </div>
+        
