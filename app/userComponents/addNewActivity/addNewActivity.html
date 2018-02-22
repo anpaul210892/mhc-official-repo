@@ -185,14 +185,10 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Event type</label>
-                                        <select class="custom-select col-12" id="inlineFormCustomSelect">
-                                            <option selected>Choose...</option>
-                                            <option value="1">Parties & Nightlife</option>
-                                            <option value="2">Food & Dining</option>
-                                            <option value="3">Arts & Culture</option>
+                                        <select class="custom-select col-12" id="inlineFormCustomSelect" ng-model="eventType" ng-options="eventType as eventType for eventType in eventTypes">
                                         </select>
                                     </div>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <label>Alternate Event type 1</label>
                                         <select class="custom-select col-12" id="inlineFormCustomSelect">
                                             <option selected>Choose...</option>
@@ -209,7 +205,7 @@
                                             <option value="2">Food & Dining</option>
                                             <option value="3">Arts & Culture</option>
                                         </select>
-                                    </div>
+                                    </div> -->
                                     <div class="form-group">
                                             <label>Event Description</label>
                                             <textarea ui-tinymce="tinymceOptions" ng-model="tinymceModel"></textarea>

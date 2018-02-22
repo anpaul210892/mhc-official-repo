@@ -8,7 +8,7 @@
     function addNewActivityCtrl($scope, $compile, $location) {
         var user=firebase.auth().currentUser;
         if(user) {
-            $scope.onload = function(){  
+            $scope.onload = function() {  
                     $scope.tinymceOptions = {
                         resize: false,
                         height: 300,
@@ -17,8 +17,12 @@
                                     "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
                                     "save table contextmenu directionality emoticons template paste textcolor"
                                 ],
-                                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
-                    };   
+                                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons",
+                    };
+                    firebase.database().ref('/eventTypes/').once('value').then(function(snapshot) {
+                        $scope.eventTypes =  snapshot.val();
+                        $scope.eventType = $scope.eventTypes[0];                       
+                    });
             };
             $scope.onload();
 
@@ -29,7 +33,7 @@
                                     .removeClass('hide')
                                     .removeAttr('id')
                                     .insertBefore($template);                            
-                $compile($clone)($scope); 
+                $compile($clone)($scope);
             }; 
         
             $scope.cloneremove = function(event) {
