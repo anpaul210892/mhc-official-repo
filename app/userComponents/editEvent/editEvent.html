@@ -1,0 +1,395 @@
+<div class="row">
+        <div class="col-sm-12">
+            <div class="card card-body">
+                <h4 class="card-title">Edit Activity</h4> 
+                <form id="surveyForm" class="form-horizontal m-t-40" method="post" novalidate>
+                    <div class="form-group">
+                        <label>Event Title<span class="help"> </span></label>
+                        <input type="text" ng-model="eventTitle" required class="form-control" placeholder="Wirte your event title name">
+                    </div>
+                    <div class="form-group">
+                        <label>Event Short Description<span class="help"> </span></label>
+                        <input type="text" ng-model="eventShortDescription" required class="form-control" placeholder="Wirte your event short desciption">
+                    </div>
+                    <div class="form-group">
+                        <label>Event type</label>
+                        <select class="custom-select col-12" id="inlineFormCustomSelect" ng-model="eventType" ng-options="eventType as eventType for eventType in eventTypes">
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Event Tags</label>
+                        <tags-input ng-model="eventTags"></tags-input>
+                    </div>
+                    <div class="form-group">
+                        <label>Event Location</label>
+                        <input type="text" ng-model="eventLocation" ng-blur="GetLocation()"required class="form-control" placeholder="Event Location">
+                        <div id="map-box"class="map-box">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Event Description</label>
+                    </div>
+                            <!-- containing an text field and a Remove button -->
+                    <div data-ng-repeat="eventDescription in eventDescriptions">
+                        <div class="form-group" id="labTemplate">
+                            <div class="row form-material">
+                                <div class="col-md-11">
+                                <input type="text" required class="form-control" data-ng-model="eventDescription.Label" placeholder="Wirte your Label Name"><br>
+                                <textarea ui-tinymce="tinymceOptions" data-ng-model="eventDescription.Text"></textarea>
+                                </div>
+                                <div class="col-md-1" id="button">
+                                <button type="button" ng-click="cloneremove($index)" class="btn btn-default labButtoon"><i class="fa fa-minus"></i></button>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-material">
+                        <div class="col-md-12">
+                            <label>Add New Label</label> <button data-ng-click="clonerow()" type="button" class="btn btn-default labButton"><i class="fa fa-plus"></i></button>
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <label>Header image *</label>
+                        <input name="image" class="form-control" type="file" value="upload" id="fileButton" aria-describedby="fileHelp"> 
+                        <img class="ui small image" height="5%" width="15%" id="displayImage" ng-show="displayImageshow"> <br>
+                        <span><button type="button" id="displayImageCancel" ng-click="canceldisplayImage()" class="ui primary button">Cancel</button></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Carousel image 1*</label>
+                        <input name="image" class="form-control" type="file" value="upload1" id="carousel1" aria-describedby="fileHelp"> 
+                        <img class="ui small image" height="5%" width="15%" id="carouselone" ng-show="carousel1show"> <br>
+                        <span><button type="button" id="car1imgCancel" ng-click="cancelCarousel1()" class="ui primary button">Cancel</button></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Carousel image 2*</label>
+                        <input name="image2" class="form-control" type="file" value="upload2" id="carousel2" aria-describedby="fileHelp">
+                        <img class="ui small image" height="5%" width="15%" id="carouseltwo" ng-show="carousel2show"><br>
+                        <span><button type="button" id="car2imgCancel" ng-click="cancelCarousel2()" class="ui primary button">Cancel</button></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Carousel image 3*</label>
+                        <input name="image3" class="form-control" type="file" value="upload3" id="carousel3" aria-describedby="fileHelp">
+                        <img class="ui small image" height="5%" width="15%" id="carouselthree" ng-show="carousel3show"><br>
+                        <span><button type="button" id="car3imgCancel" ng-click="cancelCarousel3()" class="ui primary button">Cancel</button></span>
+                    </div>
+                    <div class="form-group switch">
+                    <label><b><big>Time Type:</big></b></label>
+                    <label>One -Time
+                        <input type="checkbox" ng-model="multiChecked" ng-click="showSingleMultiple()" id="timetype"><span class="lever"></span>Multiple Slots</label>
+                    </div>
+                    <div class="card">
+                    <div class="card-body">  
+                    <div class="row form-material">
+                        <div class="row onetime" id="onetime" ng-show="oneTime">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5"> 
+                            <label>Start Date Time</label>
+                            <circulartimepicker model="singlestartDate" class="form-control"></circulartimepicker>
+                            <!-- <input type="text" id="start-date" class="form-control" ng-model="singlestartDate" placeholder="DD/MM/YYYY - HH:mm"> -->
+                            </div>
+                            <div class="col-md-5">
+                            <label>End Date Time</label>
+                            <circulartimepicker model="singleEndDate" class="form-control"></circulartimepicker>
+                            <!-- <input type="text" ng-model="singleEndDate" id="end-date" class="form-control" placeholder="DD/MM/YYYY - HH:mm"> -->
+                            </div>
+                        </div> 
+                        <div class="col-md-12 mtime"  id="mtime" ng-show="!oneTime">
+                            <div class="row">
+                                    <div class="col-md-6">
+                                            <h5 class="box-title m-t-30">Start Date</h5>
+                                            <circulartimepicker model="multipleStartDate" format="{momentFormat:'YYYY/MM/DD'}" class="form-control"></circulartimepicker>
+                                            <!-- <input type="text" class="form-control mydatepicker" ng-model="multipleStartDate" placeholder="DD/MM/YYYY"> -->
+                                    </div>
+                                    <div class="col-md-6">
+                                            <h5 class="box-title m-t-30">End Date</h5>
+                                            <circulartimepicker model="multipleEndDate" format="{momentFormat:'YYYY/MM/DD'}" class="form-control"></circulartimepicker>
+                                    </div>                                                
+                            </div><br>
+                        <!-- Monday -->
+                        <div class="row form-group form-material">
+                            <div class="col-md-2">
+                                <input type="checkbox" ng-model="monCheck" class="check" id="minimal-checkbox-1" /><label for="minimal-checkbox-1">Monday</label>
+                                </div>
+                                <div class="col-md-2"> 
+                                <label>Start Time</label>
+                            </div> 
+                            <div class="col-md-2">
+                                <label>End Time</label>
+                            </div>
+                            <div class=" col-md-1">
+                                <button ng-click="clonemon()" type="button" class="btn btn-default monButton"><i class="fa fa-plus"></i></button>
+                            </div>  
+                        </div>
+                        <!-- containing an text field and a Remove button -->
+                        <div class="form-group" id="monTemplate" data-ng-repeat="monSlot in monSlots">
+                            <div class="row form-material">
+                                <div class="col-md-2"> 
+                                </div>
+                                    <div class="col-md-2">
+                                    <circulartimepicker model="monSlotstartTime" format="{momentFormat:'hh:mm A'}" class="form-control"></circulartimepicker>
+                                    <!-- <input type="time" data-ng-model="monSlot.startTime" class="form-control"/>  -->
+                                </div> 
+                                <div class="col-md-2">
+                                    <circulartimepicker model="monSlotendTime" format="{momentFormat:'hh:mm A'}" class="form-control"></circulartimepicker>
+                                    <!-- <input type="time" data-ng-model="monSlot.endTime" class="form-control"/> -->
+                                </div> 
+                                <div class="col-md-1">
+                                    <button ng-click="monremove($index)" type="button" class="btn btn-default monButtoon"><i class="fa fa-minus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tuesday -->
+                        <div class="row form-group form-material">
+                                <div class="col-md-2">
+                                    <input type="checkbox" ng-model="tueCheck" class="check" id="minimal-checkbox-2" /><label for="minimal-checkbox-2">Tuesday</label>
+                                    </div>
+                                    <div class="col-md-2"> 
+                                    <label>Start Time</label>
+                                </div> 
+                                <div class="col-md-2">
+                                    <label>End Time</label>
+                                </div>
+                                <div class=" col-md-1">
+                                    <button ng-click="clonetue()" type="button" class="btn btn-default tueButton"><i class="fa fa-plus"></i></button>
+                                </div>  
+                            </div>
+                                <!-- containing an text field and a Remove button -->
+                            <div class="form-group" id="tueTemplate" data-ng-repeat="tueSlot in tueSlots">
+                                <div class="row form-material">
+                                    <div class="col-md-2"> 
+                                    </div>
+                                        <div class="col-md-2"> 
+                                        <circulartimepicker model="tueSlotstartTime" format="{momentFormat:'hh:mm A'}" class="form-control"></circulartimepicker>
+                                    </div> 
+                                    <div class="col-md-2">
+                                        <circulartimepicker model="tueSlotendTime" format="{momentFormat:'hh:mm A'}" class="form-control"></circulartimepicker>
+                                    </div> 
+                                    <div class="col-md-1">
+                                        <button ng-click="tueremove($index)" type="button" class="btn btn-default tueButtoon"><i class="fa fa-minus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        <!-- Wednesday -->
+                        <div class="row form-group form-material">
+                                <div class="col-md-2">
+                                    <input type="checkbox"  ng-model="wedCheck" class="check" id="minimal-checkbox-3" /><label for="minimal-checkbox-3">Wednesday</label>
+                                    </div>
+                                    <div class="col-md-2"> 
+                                    <label>Start Time</label>
+                                </div> 
+                                <div class="col-md-2">
+                                    <label>End Time</label>
+                                </div>
+                                <div class=" col-md-1">
+                                    <button ng-click="clonewed()" type="button" class="btn btn-default wedButton"><i class="fa fa-plus"></i></button>
+                                </div>  
+                            </div>
+                                <!-- containing an text field and a Remove button -->
+                            <div class="form-group" id="wedTemplate" data-ng-repeat="wedSlot in wedSlots">
+                                <div class="row form-material">
+                                    <div class="col-md-2"> 
+                                    </div>
+                                        <div class="col-md-2"> 
+                                        <circulartimepicker model="wedSlotstartTime" format="{momentFormat:'hh:mm A'}" class="form-control"></circulartimepicker> 
+                                    </div> 
+                                    <div class="col-md-2">
+                                        <circulartimepicker model="wedSlotendTime" format="{momentFormat:'hh:mm A'}" class="form-control"></circulartimepicker>
+                                    </div> 
+                                    <div class="col-md-1">
+                                        <button ng-click="wedremove($index)" type="button" class="btn btn-default wedButtoon"><i class="fa fa-minus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- Thursday -->
+                        <div class="row form-group form-material">
+                                <div class="col-md-2">
+                                    <input type="checkbox" class="check" ng-model="thuCheck" id="minimal-checkbox-4" /><label for="minimal-checkbox-4">Thursday</label>
+                                    </div>
+                                    <div class="col-md-2"> 
+                                    <label>Start Time</label>
+                                </div> 
+                                <div class="col-md-2">
+                                    <label>End Time</label>
+                                </div>
+                                <div class=" col-md-1">
+                                    <button ng-click="clonethu()" type="button" class="btn btn-default thuButton"><i class="fa fa-plus"></i></button>
+                                </div>  
+                            </div>
+                                <!-- containing an text field and a Remove button -->
+                            <div class="form-group" id="thuTemplate" data-ng-repeat="thuSlot in thuSlots">
+                                <div class="row form-material">
+                                    <div class="col-md-2"> 
+                                    </div>
+                                        <div class="col-md-2"> 
+                                        <circulartimepicker model="thuSlotstartTime" format="{momentFormat:'hh:mm A'}" class="form-control"></circulartimepicker> 
+                                    </div> 
+                                    <div class="col-md-2">
+                                        <circulartimepicker model="thuSlotendTime" format="{momentFormat:'hh:mm A'}" class="form-control"></circulartimepicker>
+                                    </div> 
+                                    <div class="col-md-1">
+                                        <button ng-click="thuremove($index)" type="button" class="btn btn-default thuButtoon"><i class="fa fa-minus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        <!-- Friday -->
+                        <div class="row form-group form-material">
+                                <div class="col-md-2">
+                                    <input type="checkbox" class="check" ng-model="friCheck" id="minimal-checkbox-5" /><label for="minimal-checkbox-5">Friday</label>
+                                    </div>
+                                    <div class="col-md-2"> 
+                                    <label>Start Time</label>
+                                </div> 
+                                <div class="col-md-2">
+                                    <label>End Time</label>
+                                </div>
+                                <div class=" col-md-1">
+                                    <button ng-click="clonefri()" type="button" class="btn btn-default friButton"><i class="fa fa-plus"></i></button>
+                                </div>  
+                            </div>
+                                <!-- containing an text field and a Remove button -->
+                            <div class="form-group" id="friTemplate" data-ng-repeat="friSlot in friSlots">
+                                <div class="row form-material">
+                                    <div class="col-md-2"> 
+                                    </div>
+                                        <div class="col-md-2"> 
+                                        <circulartimepicker model="friSlotstartTime" format="{momentFormat:'hh:mm A'}" class="form-control"></circulartimepicker> 
+                                    </div> 
+                                    <div class="col-md-2">
+                                        <circulartimepicker model="friSlotendTime" format="{momentFormat:'hh:mm A'}" class="form-control"></circulartimepicker>
+                                    </div> 
+                                    <div class="col-md-1">
+                                        <button ng-click="friremove($index)" type="button" class="btn btn-default friButtoon"><i class="fa fa-minus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        <!-- Saturday -->
+                        <div class="row form-group form-material">
+                                <div class="col-md-2">
+                                    <input type="checkbox" class="check" ng-model="satCheck" id="minimal-checkbox-6" /><label for="minimal-checkbox-6">Saturday</label>
+                                    </div>
+                                    <div class="col-md-2"> 
+                                    <label>Start Time</label>
+                                </div> 
+                                <div class="col-md-2">
+                                    <label>End Time</label>
+                                </div>
+                                <div class=" col-md-1">
+                                    <button ng-click="clonesat()" type="button" class="btn btn-default satButton"><i class="fa fa-plus"></i></button>
+                                </div>  
+                            </div>
+                                <!-- containing an text field and a Remove button -->
+                            <div class="form-group" id="satTemplate" data-ng-repeat="satSlot in satSlots">
+                                <div class="row form-material">
+                                    <div class="col-md-2"> 
+                                    </div>
+                                        <div class="col-md-2"> 
+                                        <circulartimepicker model="satSlotstartTime" format="{momentFormat:'hh:mm A'}" class="form-control"></circulartimepicker>
+                                    </div> 
+                                    <div class="col-md-2">
+                                        <circulartimepicker model="satSlotendTime" format="{momentFormat:'hh:mm A'}" class="form-control"></circulartimepicker>
+                                    </div> 
+                                    <div class="col-md-1">
+                                        <button ng-click="satremove($index)" type="button" class="btn btn-default satButtoon"><i class="fa fa-minus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        <!-- Sunday -->
+                        <div class="row form-group form-material">
+                                <div class="col-md-2">
+                                    <input type="checkbox" class="check" ng-model="sunCheck" id="minimal-checkbox-7" /><label for="minimal-checkbox-7">Sunday</label>
+                                    </div>
+                                    <div class="col-md-2"> 
+                                    <label>Start Time</label>
+                                </div> 
+                                <div class="col-md-2">
+                                    <label>End Time</label>
+                                </div>
+                                <div class=" col-md-1">
+                                    <button ng-click="clonesun()" type="button" class="btn btn-default sunButton"><i class="fa fa-plus"></i></button>
+                                </div>  
+                            </div>
+                                <!-- containing an text field and a Remove button -->
+                            <div class="form-group" id="sunTemplate" data-ng-repeat="sunSlot in sunSlots">
+                                <div class="row form-material">
+                                    <div class="col-md-2"> 
+                                    </div>
+                                        <div class="col-md-2"> 
+                                        <circulartimepicker model="sunSlotstartTime"  format="{momentFormat:'hh:mm A'}" class="form-control"></circulartimepicker>
+                                    </div> 
+                                    <div class="col-md-2">
+                                        <circulartimepicker model="sunSlotendTime" format="{momentFormat:'hh:mm A'}" class="form-control"></circulartimepicker>
+                                    </div> 
+                                    <div class="col-md-1">
+                                        <button ng-click="sunremove($index)" type="button" class="btn btn-default sunButtoon"><i class="fa fa-minus"></i></button>
+                                    </div>
+                                </div>
+                            </div>                                 
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    
+                    <div class="card">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Pass Variants</label>
+                        </div>						 
+                        <!-- containing an text field and a Remove button -->
+                        <div class="form-group" id="dateTemplate" data-ng-repeat="passVariant in passVariants">
+                        <div class="row form-material">
+                                <div class="col-md-3">
+                                <input class="form-control" type="text" data-ng-model="passVariant.Label" placeholder="Label" />
+                                </div>
+                                <div class="col-md-2">
+                                <input class="form-control" type="number"  data-ng-model="passVariant.memberPrice" placeholder="Member Price" />
+                                </div>
+                            <div class="col-md-2">
+                                <input class="form-control" type="number" data-ng-model="passVariant.nonMemberPrice" placeholder="Non-Member Price" />
+                            </div>
+                            <div class="col-md-2">
+                                <input class="form-control" type="number" data-ng-model="passVariant.minBooking" placeholder="Min Booking" />
+                            </div>
+                            <div class="col-md-2">
+                                <input class="form-control" type="number" data-ng-model="passVariant.maxBooking" placeholder="Max Booking" />
+                            </div>
+                            <div class="col-md-1">
+                                <button type="button" ng-click="passremove($index)" class="btn btn-default removeButton"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row form-material">
+                        <div class="col-md-12">
+                            <label>Add New Pass Variant</label> <button data-ng-click="clonePass()" type="button" class="btn btn-default labButton"><i class="fa fa-plus"></i></button>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    
+                    <div class="form-group switch">
+                                <label><b><big>Transportation:</big></b></label>
+                                <label>No
+                                    <input ng-model="transportationAvailed" type="checkbox"><span class="lever"></span>Yes</label>
+                    </div>
+
+                    <div class="form-group switch">
+                            <label><b><big>Cancellable:</big></b></label>
+                            <label>No
+                                <input ng-model="cancelChecked" type="checkbox"><span class="lever"></span>Yes</label>
+                    </div>
+
+                    <div class="text-xs-right">
+                            <button type="submit" ng-click="submit()" class="btn btn-info">Submit</button>
+                            <button type="reset" ng-click="reset()" class="btn btn-inverse">Reset</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>

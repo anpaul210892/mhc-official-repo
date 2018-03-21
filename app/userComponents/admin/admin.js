@@ -29,7 +29,7 @@
                 if (height > topOffset) {
                     $(".page-wrapper").css("min-height", (height) + "px");
                 }
-                $(".fix-header .topbar").stick_in_parent({});
+                // $(".fix-header .topbar").stick_in_parent({});
             };
             $scope.onloadClasses();
             $scope.changeSideBar = function(device){
@@ -73,6 +73,7 @@
         } else {
             window.location.href="#/login";
         }
+        
 }
     
 })();

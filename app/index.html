@@ -37,16 +37,23 @@
     <link href="assets/plugins/c3-master/c3.min.css" rel="stylesheet">
     <!-- Vector CSS -->
     <link href="assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="bower_components/ng-tags-input/ng-tags-input.min.css">
+    <link rel="stylesheet" href="bower_components/angular-circular-timepicker/dist/stylesheets/angular.circular.timepicker.css"/>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/angular-circular-timepicker/dist/javascript/angular.circular.timepicker.js"></script>
 <script src="assets/plugins/jquery/jquery.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMDtmuv5Xwlm-6YWOuSxDVkq_Jj5wWYy4&callback=" async defer></script>
 </head>
 <body ng-app="myApp">
   <div ng-view></div>   
@@ -173,6 +180,7 @@
     <!-- wysuhtml5 Plugin JavaScript -->
     <script type="text/javascript" src="bower_components/tinymce/tinymce.js"></script>
     <script type="text/javascript" src="bower_components/angular-ui-tinymce/src/tinymce.js"></script>
+    <script src="bower_components/ng-tags-input/ng-tags-input.min.js"></script>
     <script src="app.js"></script>
     <!-- user Components -->
     <script src="userComponents/login/login.js"></script>
@@ -180,9 +188,12 @@
     <script src="userComponents/register/register.js"></script>
     <script src="userComponents/forgotPassword/forgotPassword.js"></script>
     <script src="userComponents/common/rememberMe.service.js"></script>
+    <script src="userComponents/common/shareService.service.js"></script>
     <script src="userComponents/common/register.directive.js"></script>
     <script src="userComponents/profile/profile.js"></script>
     <script src="userComponents/addNewActivity/addNewActivity.js"></script>
+    <script src="userComponents/editEvent/editEvent.js"></script>
+    <script src="userComponents/events/events.js"></script>
     
     <script src="components/version/version.js"></script>
     <script src="components/version/version-directive.js"></script>

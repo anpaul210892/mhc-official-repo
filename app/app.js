@@ -9,8 +9,13 @@ var mhcApp = angular.module('myApp', [
   'myApp.forgotPassword',
   'myApp.profile',
   'myApp.addNewActivity',
+  'myApp.events',
+  'myApp.editEvent',
   'myApp.version',
-  'ui.tinymce'
+  'ui.tinymce',
+  'ngTagsInput',
+  'firebase',
+  'angular.circular.datetimepicker'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $routeProvider
@@ -34,10 +39,18 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
     controller: 'profileCtrl',
     templateUrl: 'userComponents/profile/profile.html'
 })
-.when('/addNewActivity', {
-    controller: 'addNewActivityCtrl',
-    templateUrl: 'userComponents/addNewActivity/addNewActivity.html'
-})
+  .when('/addNewActivity', {
+      controller: 'addNewActivityCtrl',
+      templateUrl: 'userComponents/addNewActivity/addNewActivity.html'
+  })
+  .when('/events', {
+    controller: 'eventsCtrl',
+    templateUrl: 'userComponents/events/events.html'
+  })
+  .when('/editEvent', {
+    controller: 'editEventCtrl',
+    templateUrl: 'userComponents/editEvent/editEvent.html'
+  })
  .otherwise({ redirectTo: '/login' });
 
     var config = {

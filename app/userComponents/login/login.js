@@ -121,7 +121,7 @@
       };
         $scope.login = function() {
             firebaseInitial.signInWithEmailAndPassword($scope.email, $scope.password).then(function(user) {
-                if(user.emailVerified === false){
+                if(user.emailVerified === true){
                     firebase.database().ref('/mhcUsers/' + user.uid).once('value').then(function(snapshot) {
                         $rootScope.user =  snapshot.val();
                         $rootScope.user.addressMapUrl=$sce.trustAsResourceUrl("https://www.google.com/maps?q=["+$rootScope.user.address+" "+$rootScope.user.zipCode+"]&output=embed");                        
